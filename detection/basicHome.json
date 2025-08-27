@@ -1,0 +1,52 @@
+{
+  "room1": {
+    "objects": {
+      "person": 0,
+      "chair": 56,
+      "bed": 59,
+      "tv": 62,
+      "book": 73,
+      "dining table": 60
+    }
+  },
+  "room2": {
+    "objects": {
+      "person": 0,
+      "chair": 56,
+      "bed": 59,
+      "tv": 62,
+      "book": 73,
+      "dining table": 60
+    }
+  },
+  "kitchen": {
+    "objects": {
+      "person": 0,
+      "refrigerator": 72,
+      "microwave": 68,
+      "oven": 69,
+      "sink": 71,
+      "dining table": 60
+    }
+  },
+  "bath room": {
+    "objects": {
+      "person": 0,
+      "toilet": 61,
+      "sink": 71,
+      "toothbrush": 79,
+      "hair drier": 89
+    }
+  },
+  "living room": {
+    "objects": {
+      "person": 0,
+      "couch": 57,
+      "tv": 62,
+      "remote": 65,
+      "chair": 56,
+      "potted plant": 58,
+      "book": 84
+    }
+  }
+}
