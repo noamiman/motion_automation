@@ -89,7 +89,7 @@ class MotionAnalyzer:
     def __init__(self,
                  model_path: str = "yolov8n-pose.pt",
                  video_source: int | str = 0,
-                 output_json: str = "motion_analysis_room1.json",
+                 #output_json: str = "motion_analysis_room1.json",
                  show: bool = True):
         self.model = YOLO(model_path)
         self.cap = cv2.VideoCapture(video_source)
@@ -380,8 +380,8 @@ class MotionAnalyzer:
                         "confidence": conf,        # כולל base_state
                         "features": feats
                     }
-                    if kp is not None:
-                        det["keypoints"] = kp.tolist()
+                    # if kp is not None:
+                    #     det["keypoints"] = kp.tolist()
 
                     frame_entry["detections"].append(det)
 
@@ -419,7 +419,7 @@ if __name__ == "__main__":
     analyzer = MotionAnalyzer(
         model_path="yolov8n-pose.pt",   # דגם Pose (אפשר גם s/m לפי חומרה)
         video_source=0,                 # 0 = מצלמה; או path לקובץ וידאו
-        output_json="motion_analysis_room1.json",
+        output_json="data/motion_analysis_room1.json",
         show=True
     )
     analyzer.run()
