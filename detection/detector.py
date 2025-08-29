@@ -12,7 +12,7 @@ model = YOLO(model_path)
 print(model.names)
 
 # using rooms objects that already defined
-with open("basicHome.json", "r") as f:
+with open("data/basicHome.json", "r") as f:
     basic_home_details = json.load(f)
 
 # open camera

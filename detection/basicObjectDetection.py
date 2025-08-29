@@ -149,7 +149,7 @@ class BasicObjectDetection:
 
 detector = BasicObjectDetection(
     model_path="yolov8n.pt",
-    basic_home_path="basicHome.json",
+    basic_home_path="data/basicHome.json",
     output_json="detections_room1.json",
     room_name="room1",
     confidence_threshold=0.6,
