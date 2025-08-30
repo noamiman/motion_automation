@@ -89,7 +89,7 @@ class MotionAnalyzer:
     def __init__(self,
                  model_path: str = "yolov8n-pose.pt",
                  video_source: int | str = 0,
-                 #output_json: str = "motion_analysis_room1.json",
+                 output_json: str = "motion_analysis_room1.json",
                  show: bool = True):
         self.model = YOLO(model_path)
         self.cap = cv2.VideoCapture(video_source)
