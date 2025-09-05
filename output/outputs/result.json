@@ -1,0 +1,230 @@
+{
+  "representatives": [
+    "At 21:05, Person 1 is likely preparing to perform an action by bending their knees and raising their hands. At 21:05, Person 2 is likely initiating a gesture by raising both hands.",
+    "The person is likely preparing to perform a physical action, possibly a gesture or movement, as indicated by the raised hand and bent posture.",
+    "The person is likely preparing to perform a physical action, possibly stretching or bending, as indicated by the deep bends observed.",
+    "The person is likely preparing to perform a task that requires reaching, possibly with their left hand.",
+    "The person is likely taking a break, as they are sitting with a relaxed posture and no visible signs of preparation for physical activity.",
+    "At 21:05, Person 1 is likely preparing to perform an action by slightly bending their left and right knees. At 21:05, Person 2 is likely about to raise their left hand.",
+    "At 21:05, person 1 is likely preparing to stand up by bending their knees and raising their hands. Person 2 is also preparing to stand up with a slight bend in their right knee. Person 3's deep bends suggest they are getting ready to jump or explosively move upward.",
+    "At 21:05, Person 1 is likely preparing to stand up from a sitting position due to the deep bend in both legs. \n\nAt 21:05, Person 2 is likely standing with an intention to sit down or squat, indicated by the simultaneous deep bends in all four legs.",
+    "The person is likely preparing to speak or make a point, as indicated by the raised hand and slight bends in their body posture.",
+    "The person is likely reaching for something, as indicated by the \"reach\" event and both hands being extended.",
+    "The person is likely preparing to stand up, as indicated by the raised hand and bent knees.",
+    "At 21:05, Person 1 is likely preparing to stand up from a sitting position by deepening their bends and stretching out their arms. \n\nAt 21:05, Intention unclear.\n\nAt 21:05, Person 2 is likely deepening their bends in preparation for an action, possibly standing or moving forward.\n\nAt 21:05, Intention unclear.\n\nAt 21:05, Person 3 is likely deepening their bends and stretching out their arms, possibly preparing to stand up from a sitting position.\n\nAt 21:05, Intention unclear.\n\nAt 21:05, Person 4 is likely deepening their bends in preparation for an action, possibly standing or moving forward.",
+    "At 21:05, person 1 is likely preparing to stand up from a sitting or squatting position by bending their knees and reaching for something with their left hand.",
+    "The person is likely preparing to move, possibly getting up from a seated position, as they exhibit slight bends in both knees and no reaching for anything.",
+    "At 21:05, Person 1 is likely preparing to interact with something by bending their body and raising their hand. At 21:05, Person 2 is likely initiating a conversation or greeting by raising both hands in a gesture of openness.",
+    "At 21:05, Person 1 is likely preparing to move forward by straightening their left leg and bending their right leg. \n\nAt 21:05, Person 2 is likely about to take a step forward with their right foot while keeping their left leg straight.",
+    "Both individuals are likely preparing to stand up, as they simultaneously bend their knees and lower their body.",
+    "The person is likely preparing to perform a physical activity, possibly stretching or yoga, as indicated by the deep bends in both legs and arms.",
+    "The person is likely preparing to bend or move their body in a way that requires flexibility, as indicated by the bending action at 21:05.",
+    "At 21:05, person 1 likely intends to gesture or make a point with their raised hand. \n\nAt 21:05, intention unclear due to conflicting body language (raising hand while walking/moving).",
+    "At 21:05, Person 1 is likely preparing to exit the room by raising their hand and bending their body in a deep bend. \n\nAt 21:05, Person 2 is likely also preparing to exit the room by raising their hand and bending their body in a deep bend.",
+    "The person is likely exiting the room and preparing to leave by raising their hand.",
+    "The person is likely preparing to pick something up, as indicated by the raised hand and bending motion at 21:05.",
+    "The person is likely preparing to interact with something in front of them, possibly initiating a conversation or action.",
+    "At 21:05, Person 1 is likely preparing to pick something up by bending down and reaching with their left hand. \n\nAt 21:05, Person 2's intention unclear due to lack of clear events.",
+    "Person 1 is likely trying to bend down, as they are maintaining a deep bend position with both hands and legs. (Time: 21:05)\n\nPerson 2 appears to be attempting to reach for something, as their body posture indicates a deeper bend in all four limbs. (Time: 21:05)",
+    "The person is likely reaching for something on the left side of their body, possibly to retrieve an object.",
+    "The person is likely preparing to walk or move forward, as indicated by the change in body posture from bending to a more upright position. (Time: 21:05)",
+    "The person is likely taking a deep breath, as indicated by the bending of their knees and torso.",
+    "At 21:05, person 1 is likely preparing to move or change position due to the simultaneous deep bends in all directions. Person 2 is likely continuing a movement, possibly walking, with slight bending in one direction."
+  ],
+  "clusters": [
+    [
+      0,
+      2,
+      5,
+      7,
+      18,
+      20,
+      29
+    ],
+    [
+      1,
+      19
+    ],
+    [
+      3,
+      21,
+      22,
+      23,
+      45,
+      46
+    ],
+    [
+      4
+    ],
+    [
+      6
+    ],
+    [
+      8,
+      34
+    ],
+    [
+      9,
+      16,
+      17,
+      26
+    ],
+    [
+      10
+    ],
+    [
+      11
+    ],
+    [
+      12
+    ],
+    [
+      13,
+      24
+    ],
+    [
+      14
+    ],
+    [
+      15
+    ],
+    [
+      25
+    ],
+    [
+      27
+    ],
+    [
+      28
+    ],
+    [
+      30
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      33
+    ],
+    [
+      35
+    ],
+    [
+      36
+    ],
+    [
+      37
+    ],
+    [
+      38,
+      40,
+      47
+    ],
+    [
+      39
+    ],
+    [
+      41
+    ],
+    [
+      42
+    ],
+    [
+      43
+    ],
+    [
+      44
+    ],
+    [
+      48
+    ],
+    [
+      49
+    ]
+  ],
+  "counts": [
+    7,
+    2,
+    6,
+    1,
+    1,
+    2,
+    4,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "origin_detections": [
+    "At 21:05, Person 1 is likely preparing to perform an action by raising their hand and bending their body in a way that suggests they are getting ready to stand up or move forward. \n\nAt 21:05, Person 2's intention is unclear due to the lack of clear events and movements.",
+    "The person is likely preparing to perform a physical action, possibly a gesture or movement, as indicated by the raised hand and bent posture.",
+    "At 21:05, Person 1 is likely preparing to stand up by bending their knees and reaching for something with their right hand. \n\nAt 21:05, Person 2's intention is unclear due to inconsistent body movements.",
+    "The person is likely preparing to perform a physical action, possibly stretching or bending, as indicated by the deep bends observed.",
+    "The person is likely preparing to perform a task that requires reaching, possibly with their left hand.",
+    "At 21:05, Person 1 is likely preparing to perform an action by deep bending their knees and raising their hands. \n\nAt 21:05, Person 2 is likely initiating a movement towards the left by slightly bending their knees and raising their hand.\n\nAt 21:05, Person 3's actions are unclear due to unknown events.",
+    "The person is likely taking a break, as they are sitting with a relaxed posture and no visible signs of preparation for physical activity.",
+    "At 21:05, Person 1 is likely preparing to perform a physical action by raising their hand and bending their body in preparation. \n\nAt 21:05, Person 2's intention unclear due to lack of clear movement or posture change.",
+    "At 21:05, Person 1 is likely preparing to perform an action by slightly bending their left and right knees. At 21:05, Person 2 is likely about to raise their left hand.",
+    "At 21:05, person 1 is likely preparing to stand up by bending their knees and raising their hands. Person 2 is also preparing to stand up with a slight bend in their right knee. Person 3's deep bends suggest they are getting ready to jump or explosively move upward.",
+    "At 21:05, Person 1 is likely preparing to stand up from a sitting position due to the deep bend in both legs. \n\nAt 21:05, Person 2 is likely standing with an intention to sit down or squat, indicated by the simultaneous deep bends in all four legs.",
+    "The person is likely preparing to speak or make a point, as indicated by the raised hand and slight bends in their body posture.",
+    "The person is likely reaching for something, as indicated by the \"reach\" event and both hands being extended.",
+    "The person is likely preparing to stand up, as indicated by the raised hand and bent knees.",
+    "At 21:05, Person 1 is likely preparing to stand up from a sitting position by deepening their bends and stretching out their arms. \n\nAt 21:05, Intention unclear.\n\nAt 21:05, Person 2 is likely deepening their bends in preparation for an action, possibly standing or moving forward.\n\nAt 21:05, Intention unclear.\n\nAt 21:05, Person 3 is likely deepening their bends and stretching out their arms, possibly preparing to stand up from a sitting position.\n\nAt 21:05, Intention unclear.\n\nAt 21:05, Person 4 is likely deepening their bends in preparation for an action, possibly standing or moving forward.",
+    "At 21:05, person 1 is likely preparing to stand up from a sitting or squatting position by bending their knees and reaching for something with their left hand.",
+    "At 21:05, person 1 is likely preparing to stand up by bending their knees and reaching for something with their left hand. \n\nAt 21:05, person 2 is likely standing up from a seated or squatting position by bending their knees and stretching out both arms.\n\nAt 21:05, person 3 is likely standing up from a seated or squatting position by bending their knees and stretching out both arms.\n\nAt 21:05, person 4 is likely preparing to stand up by bending their knees and reaching for something with both hands.",
+    "At 21:05, Person 1 and Person 2 are likely preparing to stand up by raising their hands and bending their knees deeply on both sides. \n\nAt 21:05, Person 3 is likely preparing to stand up by bending their knees slightly on all sides.\n\nAt 21:05, Person 4 is likely preparing to stand up by bending their knees deeply on both sides.\n\nIntention unclear for Person 2 and Person 3.",
+    "At 21:05, Person 1 is likely preparing to perform a physical action by raising their hand and bending deeply on both sides. \n\nAt 21:05, Person 2's intention is unclear due to unknown events.",
+    "The person is likely preparing to perform a physical action, possibly a gesture or movement, as indicated by the raised hand and bent posture.",
+    "At 21:05, Person 1 is likely preparing to stand up by deepening their bends and raising their hands. \n\nAt 21:05, Person 2 is likely reaching for something with both hands after standing up.\n\nAt 21:05, Person 3's intention unclear.",
+    "The person is likely preparing to perform a physical action, possibly stretching or bending, as indicated by the deep bends observed.",
+    "The person is likely preparing to perform a physical action, possibly stretching or bending, as indicated by the deep bends observed.",
+    "The person is likely preparing to perform a physical activity, possibly stretching or yoga, as indicated by the deep bends and reaching out with their arms.",
+    "The person is likely preparing to stand up, as indicated by the slight bend in their left knee and deep bend in their right knee.",
+    "The person is likely preparing to move, possibly getting up from a seated position, as they exhibit slight bends in both knees and no reaching for anything.",
+    "At 21:05, Person 1 is likely preparing to stand up from a sitting or squatting position by bending their knees and raising their hands. \n\nAt 21:05, Person 2 is likely preparing to stand up from a sitting or squatting position by bending their right knee and raising their hands.",
+    "At 21:05, Person 1 is likely preparing to interact with something by bending their body and raising their hand. At 21:05, Person 2 is likely initiating a conversation or greeting by raising both hands in a gesture of openness.",
+    "At 21:05, Person 1 is likely preparing to move forward by straightening their left leg and bending their right leg. \n\nAt 21:05, Person 2 is likely about to take a step forward with their right foot while keeping their left leg straight.",
+    "At 21:05, Person 1 is likely preparing to perform an action by bending their knees and raising their hands. At 21:05, Person 2 is likely initiating a gesture by raising both hands.",
+    "Both individuals are likely preparing to stand up, as they simultaneously bend their knees and lower their body.",
+    "The person is likely preparing to perform a physical activity, possibly stretching or yoga, as indicated by the deep bends in both legs and arms.",
+    "The person is likely preparing to perform a physical activity, possibly stretching or yoga, as indicated by the deep bends in both legs and arms.",
+    "The person is likely preparing to bend or move their body in a way that requires flexibility, as indicated by the bending action at 21:05.",
+    "At 21:05, person 1 is likely preparing to perform a physical action by raising their hand and bending deeply on both sides. \n\nAt 21:05, person 2 is also likely preparing to perform a physical action by raising their hand and bending deeply on both sides.",
+    "At 21:05, person 1 likely intends to gesture or make a point with their raised hand. \n\nAt 21:05, intention unclear due to conflicting body language (raising hand while walking/moving).",
+    "At 21:05, Person 1 is likely preparing to exit the room by raising their hand and bending their body in a deep bend. \n\nAt 21:05, Person 2 is likely also preparing to exit the room by raising their hand and bending their body in a deep bend.",
+    "The person is likely exiting the room and preparing to leave by raising their hand.",
+    "The person is likely preparing to pick something up, as indicated by the raised hand and bending motion at 21:05.",
+    "The person is likely preparing to interact with something in front of them, possibly initiating a conversation or action.",
+    "The person is likely preparing to pick something up, as indicated by the raised hand and deep bending of their left arm.",
+    "At 21:05, Person 1 is likely preparing to pick something up by bending down and reaching with their left hand. \n\nAt 21:05, Person 2's intention unclear due to lack of clear events.",
+    "Person 1 is likely trying to bend down, as they are maintaining a deep bend position with both hands and legs. (Time: 21:05)\n\nPerson 2 appears to be attempting to reach for something, as their body posture indicates a deeper bend in all four limbs. (Time: 21:05)",
+    "The person is likely reaching for something on the left side of their body, possibly to retrieve an object.",
+    "The person is likely preparing to walk or move forward, as indicated by the change in body posture from bending to a more upright position. (Time: 21:05)",
+    "The person is likely preparing to bend or move their body in a way that requires flexibility, as indicated by the deep bending motion observed at 21:05.",
+    "The person is likely preparing to bend or move their body in a way that requires flexibility, as indicated by the deep bending motion observed at 21:05.",
+    "The person is likely preparing to pick something up with their right hand, as indicated by the deep bend and reaching motion.",
+    "The person is likely taking a deep breath, as indicated by the bending of their knees and torso.",
+    "At 21:05, person 1 is likely preparing to move or change position due to the simultaneous deep bends in all directions. Person 2 is likely continuing a movement, possibly walking, with slight bending in one direction."
+  ]
+}
