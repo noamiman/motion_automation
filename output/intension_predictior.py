@@ -21,17 +21,15 @@ with open("../detection/prompt.txt", "r", encoding="utf-8") as f:
 from tqdm import tqdm
 detect = []
 import time
-for frame in tqdm(frames[:50], desc="Analyzing", unit="frames"):
+for frame in tqdm(frames[:150], desc="Analyzing", unit="frames", mininterval=1):
     #print(frame)
     st = time.time()
     detect.append((intension_generator("llama3.2:3b", prompt, frame)))
     et = time.time()
-    print(f"{et - st:.3f} seconds")
+    #print(f"{et - st:.3f} seconds")
 
-# print(intension_generator("llama3.2:3b", prompt2, str(detect)))
-
-import numpy as np
 from typing import List, Callable, Dict
+import numpy as np
 
 def dedupe_by_embeddings(
     texts: List[str],
@@ -41,10 +39,14 @@ def dedupe_by_embeddings(
     """
     Group near-duplicate sentences via cosine similarity on embeddings.
     Keep the shortest sentence as the representative for each cluster.
-    Returns {"representatives": [...], "clusters": [[idxs...], ...]}
+    Returns {
+        "representatives": [
+            {"sentence": str, "count": int, "prob": float}, ...
+        ]
+    }
     """
     if not texts:
-        return {"representatives": [], "clusters": []}
+        return {"representatives": []}
 
     X = embed_fn(texts)  # shape: (n, d)
     X = X / (np.linalg.norm(X, axis=1, keepdims=True) + 1e-12)
@@ -59,15 +61,23 @@ def dedupe_by_embeddings(
         # cosine sim to i
         sims = X @ X[i].T
         cluster_idxs = np.where((sims >= sim_thresh) & (~used))[0].tolist()
-        # mark them used
         used[cluster_idxs] = True
         clusters.append(cluster_idxs)
 
-    # representative = shortest text in each cluster
-    reps = [min((texts[j] for j in c), key=lambda s: len(s)) for c in clusters]
-    counts = [len(c) for c in clusters]   # כמה טקסטים בכל אשכול
+    representatives = []
+    total = len(texts)
 
-    return {"representatives": reps, "clusters": clusters, "counts": counts}
+    for c in clusters:
+        rep_sentence = min((texts[j] for j in c), key=lambda s: len(s))
+        count = len(c)
+        prob = count / total
+        representatives.append({
+            "sentence": rep_sentence,
+            "count": count,
+            "prob": prob
+        })
+
+    return {"representatives": representatives}
 
 # pip install sentence-transformers
 from sentence_transformers import SentenceTransformer

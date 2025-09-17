@@ -11,4 +11,3 @@ with open("outputs/result.json", "r", encoding="utf-8") as f:
     a = json.load(f)
     sent = str(a["representatives"])
 print(sent)
-print(intension_generator(model="llama3.2:3b", prompt=prompt2, data=sent))
