@@ -1,11 +1,8 @@
 import json
-from idlelib.iomenu import encoding
 from typing import Any, Dict, List, Union
+from datetime import datetime
 
-from ultralytics.hub import events
-
-
-# מיפוי ערכי זווית -> קטגוריה מילולית
+# ─────────────────────────── עזרי קטגוריות ───────────────────────────
 def _joint_cat(val: Any) -> str:
     if val is None:
         return "unknown"
@@ -13,7 +10,6 @@ def _joint_cat(val: Any) -> str:
         v = float(val)
     except (TypeError, ValueError):
         return "unknown"
-    # ספים דיפולטיביים סבירים: <10 ישר, 10–40 כפיפה קלה, >40 כפיפה עמוקה
     if v < 10:
         return "straight"
     if v < 40:
@@ -21,7 +17,6 @@ def _joint_cat(val: Any) -> str:
     return "deep_bend"
 
 def _conf_bin(p: float) -> str:
-    # high ≥ 0.8, medium ≥ 0.5, אחרת low
     if p >= 0.8:
         return "high"
     if p >= 0.5:
@@ -37,16 +32,25 @@ def _reach_from_hands(left_up: bool, right_up: bool) -> str:
         return "both"
     return "none"
 
-from datetime import datetime
+# ─────────────────────────── המרה לפריים → מחרוזת ───────────────────────────
 def frame_to_llm_string(frame: Dict[str, Any]) -> str:
     ts = frame.get("timestamp_utc")
-    dt = datetime.fromisoformat(ts)  # ממיר לאובייקט datetime
-    hour_str = dt.strftime("%H:%M:%S")
-    hour_str=hour_str[0:5]
+    hour_str = "unknown"
+    if ts:
+        try:
+            dt = datetime.fromisoformat(ts)
+            hour_str = dt.strftime("%H:%M")  # חותכים לשעות:דקות
+        except Exception:
+            pass
+
     dets = frame.get("detections", [])
     if not dets:
-        # אם אין זיהוי—נחזיר מחרוזת "ריקה" שימושית
-        return f"state=unknown;time=unknown;Lup=false;Rup=false;bend(kL:unknown,kR:unknown,hL:unknown,hR:unknown);reach=none;conf=low"
+        return (
+            "state=unknown;time=unknown;Lup=false;Rup=false;"
+            "bend(kL:unknown,kR:unknown,hL:unknown,hR:unknown);"
+            "reach=none;conf=low"
+        )
+
     compressor = ""
     person_id = 1
     for det in dets:
@@ -62,17 +66,15 @@ def frame_to_llm_string(frame: Dict[str, Any]) -> str:
         hR = _joint_cat(feats.get("hip_r"))
 
         reach = _reach_from_hands(Lup, Rup)
-        conf_num = float(det.get("confidence", {}).get("base_state", 0.0))
+        conf_num = float((det.get("confidence", {}) or {}).get("base_state", 0.0))
         conf = _conf_bin(conf_num)
 
-        if det.get("events"):
-            events_str = ",".join(det.get("events"))
-        else:
-            events_str = "unknown"
+        events_list = det.get("events")
+        events_str = ",".join(events_list) if events_list else "unknown"
 
-            # בניית המחרוזת בפורמט המבוקש
-        if len(dets)>1:
-            compressor = compressor + (
+        # בניית המחרוזת
+        if len(dets) > 1:
+            compressor += (
                 f"state={state};"
                 f"time={hour_str};"
                 f"events={events_str};"
@@ -83,21 +85,23 @@ def frame_to_llm_string(frame: Dict[str, Any]) -> str:
                 f"conf={conf};"
                 f"person_id={person_id};"
             ) + ","
-            person_id = person_id+1
+            person_id += 1
         else:
-          return (
-                 f"state={state};"
-                 f"time={hour_str};"
-                 f"events={events_str};"
-                 f"Lup={'true' if Lup else 'false'};"
-                 f"Rup={'true' if Rup else 'false'};"
-                 f"bend(kL:{kL},kR:{kR},hL:{hL},hR:{hR});"
-                 f"reach={reach};"
-                 f"conf={conf}"
-              )
+            return (
+                f"state={state};"
+                f"time={hour_str};"
+                f"events={events_str};"
+                f"Lup={'true' if Lup else 'false'};"
+                f"Rup={'true' if Rup else 'false'};"
+                f"bend(kL:{kL},kR:{kR},hL:{hL},hR:{hR});"
+                f"reach={reach};"
+                f"conf={conf}"
+            )
 
-    return compressor
+    # אם היו כמה אנשים — מחזירים את המחרוזת המשולבת
+    return compressor.rstrip(",")
 
+# ─────────────────────────── המרת קלט כללי לרשימת מחרוזות ───────────────────────────
 def compress_motion_json(
     data: Union[str, Dict[str, Any], List[Dict[str, Any]]]
 ) -> List[str]:
@@ -108,12 +112,10 @@ def compress_motion_json(
       - רשימה של פריימים (list[dict]) או פריים בודד (dict)
     פלט: רשימת מחרוזות קומפקטיות—אחת לכל פריים.
     """
-    # אם הגיע path → טען מהדיסק
     if isinstance(data, str):
         with open(data, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-    # נרמל לרשימת פריימים
     if isinstance(data, dict) and "frames" in data:
         frames = data["frames"]
     elif isinstance(data, dict):
@@ -125,10 +127,30 @@ def compress_motion_json(
 
     return [frame_to_llm_string(fr) for fr in frames]
 
-with open("motion_analysis_room1.json", "r", encoding="utf-8") as f:
-    a = json.load(f)
+# ─────────────────────────── פונקציית כתיבה לייצוא ───────────────────────────
+def save_compressed_events(
+    data_or_path: Union[str, Dict[str, Any], List[Dict[str, Any]]],
+    out_path: str,
+    file_encoding: str = "utf-8",
+) -> int:
+    """
+    ממיר את הקלט (path/obj) לרשימת מחרוזות ושומר לקובץ טקסט—שורה לכל פריים.
+    מחזיר את מספר השורות שנכתבו.
+    """
+    lines = compress_motion_json(data_or_path)
+    with open(out_path, "w", encoding=file_encoding) as f:
+        for s in lines:
+            f.write(s + "\n")
+    print(f"Compressed {data_or_path} with {len(lines)} lines.")
 
-frames = compress_motion_json(a["frames"])
-with open("events.txt", "w", encoding="utf-8") as f:
-    for s in frames:
-        f.write(s + "\n")
+    return len(lines)
+
+# # אופציונלי: הרצה כ־CLI פשוט
+# if __name__ == "__main__":
+#     import argparse
+#     parser = argparse.ArgumentParser(description="Compress motion JSON and save to txt.")
+#     parser.add_argument("input", help="Path to JSON file or directory-like data")
+#     parser.add_argument("output", help="Path to output txt file")
+#     args = parser.parse_args()
+#     n = save_compressed_events(args.input, args.output)
+#     print(f"Wrote {n} lines to {args.output}")

@@ -1,0 +1,10 @@
+[
+  {
+    "action": "open air-conditioner",
+    "time": "21:00"
+  },
+  {
+    "action": "open shutters",
+    "time": "20:00"
+  }
+]

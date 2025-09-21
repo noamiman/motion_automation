@@ -1,29 +1,22 @@
+# automation_recommender.py
+import os
 import json
-from idlelib.iomenu import encoding
-import ollama
-from anyio import open_signal_receiver
 import re
 from collections import OrderedDict
+from typing import List, Optional, Dict
+import ollama
 
 ALLOWED = {
-    "open air-conditioner",
-    "close air-conditioner",
-    "turn on lights",
-    "turn off lights",
-    "open shutters",
-    "close shutters",
-    "turn on heater",
-    "turn off heater",
-    "lock door",
-    "unlock door",
-    "play music",
-    "stop music",
-    "activate sleep mode",
-    "deactivate sleep mode",
+    "open air-conditioner", "close air-conditioner",
+    "turn on lights", "turn off lights",
+    "open shutters", "close shutters",
+    "turn on heater", "turn off heater",
+    "lock door", "unlock door",
+    "play music", "stop music",
+    "activate sleep mode", "deactivate sleep mode",
     "no automation",
 }
 
-# simple alias patterns -> canonical action
 ALIAS_PATTERNS = [
     (r"\b(open|turn on)\s+(ac|a/c|air ?conditioner)\b", "open air-conditioner"),
     (r"\b(close|turn off)\s+(ac|a/c|air ?conditioner)\b", "close air-conditioner"),
@@ -48,14 +41,11 @@ def _round_down_hour(h: int, m: int) -> str:
     h = max(0, min(23, h))
     return f"{h:02d}:00"
 
-def normalize_recommendation(text: str) -> str | None:
-    """Return canonical '<action> at HH:MM' or None if cannot parse."""
+def normalize_recommendation(text: str) -> Optional[str]:
+    """מחזיר '<action> at HH:MM' או None אם לא מזוהה."""
     if not text:
         return None
-    s = text.strip().lower()
-    # remove surrounding quotes and trailing punctuation
-    s = s.strip(" '\"").rstrip(".")
-    # find time (default 00:00 if missing)
+    s = text.strip().lower().strip(" '\"").rstrip(".")
     m = TIME_RE.search(s)
     if m:
         hh, mm = int(m.group(1)), int(m.group(2))
@@ -63,57 +53,71 @@ def normalize_recommendation(text: str) -> str | None:
         hh, mm = 0, 0
     time_out = _round_down_hour(hh, mm)
 
-    # try direct allowed phrase first (e.g., 'turn on lights at 21:00')
     for act in ALLOWED:
         if s.startswith(act):
             return f"{act} at {time_out}"
 
-    # otherwise map via aliases
     for pat, canon in ALIAS_PATTERNS:
         if re.search(pat, s):
             return f"{canon} at {time_out}"
 
-    # fallback: try to extract '... at HH:MM' action text before ' at '
     m2 = re.match(r"\s*([a-z \-]+?)\s+at\s+\d{1,2}:\d{2}\s*$", s)
     if m2:
         action_guess = m2.group(1).strip()
         if action_guess in ALLOWED:
             return f"{action_guess} at {time_out}"
-
-    # give up
     return None
 
-def intension_generator(model="llama3.2:3b", prompt="", data=""):
+def intension_generator(model="llama3.2:3b", prompt="", data="") -> str:
     to_model = f"{prompt}\n\nUser input:\n{data}\n\nOutput:"
-    resp = ollama.generate(
-        model=model,
-        prompt=to_model,
-        options={"temperature": 0}
-    )
-    return resp['response'].strip()
+    resp = ollama.generate(model=model, prompt=to_model, options={"temperature": 0})
+    return resp["response"].strip()
 
-def prompt_generator_by_prob(prob: float, data_loc: str) -> list[str]:
-    with open(data_loc, "r", encoding='utf-8') as f:
-        res = json.load(f)["representatives"]
+def _save_actions_json(actions: List[str], out_path: str, encoding: str = "utf-8") -> None:
+    """שומר JSON מובנה: [{"action": ..., "time": ...}, ...]."""
+    structured: List[Dict[str, str]] = []
+    for act in actions:
+        if " at " in act:
+            action, time = act.rsplit(" at ", 1)
+            structured.append({"action": action, "time": time})
+        else:
+            structured.append({"action": act, "time": "00:00"})
+    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+    with open(out_path, "w", encoding=encoding) as f:
+        json.dump(structured, f, ensure_ascii=False, indent=2)
 
-    probs_sentences = [r["sentence"] for r in res if float(r["prob"]) >= prob]
+def prompt_generator_by_prob(
+    prob: float,
+    result_json_path: str,
+    prompt_path: str = "prompt_for_auto.txt",
+    model_name: str = "llama3.2:3b",
+    out_actions_json_path: Optional[str] = None,
+) -> List[str]:
+    """
+    מפיק פעולות מה-LLM עבור נציגים מעל סף הסתברות, מנרמל, מסיר כפילויות,
+    מחזיר רשימה. אם ניתן out_actions_json_path – שומר גם JSON מובנה.
+    """
+    # 1) קריאת נציגים
+    with open(result_json_path, "r", encoding="utf-8") as f:
+        reps = json.load(f).get("representatives", [])
+    sentences = [r["sentence"] for r in reps if float(r.get("prob", 0.0)) >= prob]
 
-    with open("prompt_for_auto.txt", "r", encoding='utf-8') as f:
+    # 2) טעינת הפרומפט
+    with open(prompt_path, "r", encoding="utf-8") as f:
         prompt = f.read()
 
-    raw_recs = [
-        intension_generator(model="llama3.2:3b", prompt=prompt, data=sent)
-        for sent in probs_sentences
-    ]
+    # 3) LLM → המלצות גולמיות
+    raw_recs = [intension_generator(model=model_name, prompt=prompt, data=s) for s in sentences]
 
-    # normalize + drop Nones
+    # 4) נרמול + סינון None
     normalized = [norm for rec in raw_recs if (norm := normalize_recommendation(rec))]
 
-    # dedupe while preserving order
+    # 5) הורדת כפילויות תוך שמירה על סדר
     deduped = list(OrderedDict.fromkeys(normalized))
 
+    # 6) שמירה אופציונלית ל-JSON
+    if out_actions_json_path:
+        _save_actions_json(deduped, out_actions_json_path)
+
+    print(f"Saved automation recommendations in {out_actions_json_path}, include {len(deduped)} options")
     return deduped
-
-
-print(prompt_generator_by_prob(0.1, "outputs/result.json"))
-
