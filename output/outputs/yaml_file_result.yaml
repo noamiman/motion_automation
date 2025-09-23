@@ -1,0 +1,28 @@
+automation:
+  id: open_ac_at_0900
+  alias: Open AC at 09:00
+  trigger:
+  - platform: time
+    at: 09:00:00
+  condition: []
+  action:
+    service: climate.turn_on
+  mode: single
+  target:
+    entity_id: cover.living_room
+condition: []
+mode: single
+
+---
+automation:
+  id: lock_door_at_10am
+  alias: Lock door at 10:00
+  trigger:
+  - platform: time
+    at: '10:00:00'
+  condition: []
+  action:
+    service: cover.open_cover
+  mode: single
+condition: []
+mode: single

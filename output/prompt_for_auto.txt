@@ -9,23 +9,28 @@ lock/unlock door,
 play/stop music,
 activate/deactivate sleep mode.
 
-Rules:
+Output format: <action> at HH:MM  (24h, zero-padded, e.g., 09:00). Do NOT output anything else.
 
-Use the earliest HH:MM in the text (if none, use 00:00).
+CRITICAL RULES (follow internally, do NOT show your reasoning):
+1) Read ONLY the text inside <input>…</input> below. Ignore ALL numbers/times in these instructions and examples.
+2) Extract all valid time mentions from <input> that match 24h clock HH:MM (regex: \b([01]?\d|2[0-3]):[0-5]\d\b) or written with am/pm (e.g., 9:31 pm).
+   - Treat single-digit hours as zero-padded (9:31 → 09:31).
+   - Convert am/pm to 24h (9:31 pm → 21:31).
+3) Ignore numbers that are NOT times: dates (2025-09-23), durations (“for 21 minutes”), percentages, version numbers, phone numbers, URLs, IDs, addresses.
+4) If at least one valid time exists, choose the EARLIEST time. Round DOWN to the hour (HH:00).
+5) If NO valid time exists, output exactly: no automation at 00:00.
+6) Never invent a time. The final HH:MM must come from a valid time in <input> after rounding.
 
-Round down to the hour (21:05 → 21:00).
-
-Format strictly: <action> at HH:MM.
-
-If nothing makes sense: no automation at HH:MM.
-
-Examples
+Examples (for behavior only; do NOT copy their times):
 Input: At 21:05, Person 1 bends knees and raises hands. At 21:05, Person 2 raises both hands.
 Output: open air-conditioner at 21:00
 
 Input: At 06:42, the room looks dim and people squint.
 Output: turn on lights at 06:00
 
-User
+Input: It’s 09:31 now, later someone yawns at 21:05.
+Output: turn on lights at 09:00
 
+<input>
 {sentence}
+</input>

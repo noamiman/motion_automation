@@ -1,11 +1,14 @@
 # main.py
 import os
 import sys
+from typing import List, Optional, Any
+from torch.backends.quantized import engine
 
 from detection.video_output import MotionAnalyzer
 from detection.data.data_compressor import save_compressed_events
 from output.intension_predictior import write_result
 from output.automation_prompt_generator import prompt_generator_by_prob
+from output.generate_yaml import ZeroShotAutomationYAML
 
 # ---- הגדרות מרכזיות ----
 MODEL_PATH = "yolov8n-pose.pt"
@@ -20,9 +23,13 @@ PROMPT_PATH = "detection/prompt.txt"
 PROMPT_AUTO_PATH = "output/prompt_for_auto.txt"
 
 MODEL_NAME = "llama3.2:3b"
-LIMIT_DETECTIONS = 50
+LIMIT_DETECTIONS = 100
 SIM_THRESH = 0.86
 ACTIONS_MIN_PROB = 0.10
+
+ACTIONS_JSON = "output/outputs/automation_rec.json"
+OUT_YAML     = "output/outputs/yaml_file_result.yaml"
+PROMPT_ZEROSHOT_PATH = "output/prompt_for_zeroShot"
 
 
 def analyze_motion(model_path: str, video_source, output_json: str, show: bool = True) -> None:
@@ -34,7 +41,6 @@ def analyze_motion(model_path: str, video_source, output_json: str, show: bool =
         show=show,
     )
     analyzer.run()
-    #print(f"[analyze_motion] wrote: {output_json}")
 
 
 def compress_events(input_json: str, out_txt: str) -> int:
@@ -73,6 +79,27 @@ def generate_automation_recs(result_json: str, prompt_path: str, out_actions_jso
     #print(f"[generate_automation_recs] {len(actions)} actions → {out_actions_json}")
     return actions
 
+# ====== פונקציית עוטפת לשימוש נוח מה-main ======
+def generate_automation_yaml_zeroshot(
+    actions_json: str,
+    prompt_path: Optional[str],
+    model_name: str = "llama3.2:3b",
+    out_yaml_path: Optional[str] = None,
+    temperature: float = 0.0,
+    max_new_tokens: int = 200,
+) -> List[str]:
+    """
+    עטיפה נוחה: מייצר YAML ב-zero-shot דרך Ollama, כולל ניקוי ונרמול.
+    """
+    gen = ZeroShotAutomationYAML(model=model_name, system_prompt_path=prompt_path)
+    return gen.run(
+        actions_json_path=actions_json,
+        out_path=out_yaml_path,
+        temperature=temperature,
+        max_new_tokens=max_new_tokens,
+    )
+
+
 
 def main() -> None:
     try:
@@ -93,6 +120,17 @@ def main() -> None:
             model_name=MODEL_NAME,
             prob=ACTIONS_MIN_PROB,
         )
+
+        yamls = generate_automation_yaml_zeroshot(
+            actions_json=ACTIONS_JSON,
+            prompt_path=PROMPT_ZEROSHOT_PATH,  # או None כדי להשתמש בדיפולט
+            model_name=MODEL_NAME,
+            out_yaml_path=OUT_YAML,
+            temperature=0.0,
+            max_new_tokens=200,
+        )
+        print(f"Wrote {len(yamls)} YAML automation(s) → {OUT_YAML}")
+
         # הדפסה אופציונלית של הפעולות עצמן:
         for a in actions:
             print("  •", a)
