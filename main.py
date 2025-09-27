@@ -18,8 +18,8 @@ EVENTS_TXT = "detection/data/events.txt"
 
 RESULT_JSON = "output/outputs/representatives_result.json"
 ACTIONS_JSON = "output/outputs/automation_rec.json"
-PROMPT_PATH = "detection/intension_prompt.txt"
-PROMPT_AUTO_PATH = "output/prompt_for_auto.txt"
+PROMPT_PATH = "prompts/intension_prompt.txt"
+PROMPT_AUTO_PATH = "prompts/prompt_for_auto.txt"
 
 MODEL_NAME = "llama3.2:3b"
 LIMIT_DETECTIONS = 100
@@ -28,7 +28,7 @@ ACTIONS_MIN_PROB = 0.10
 
 ACTIONS_JSON = "output/outputs/automation_rec.json"
 OUT_YAML     = "output/outputs/yaml_file_result.yaml"
-PROMPT_ZEROSHOT_PATH = "output/prompt_for_zeroShot"
+PROMPT_ZEROSHOT_PATH = "prompts/prompt_for_zeroShot.txt"
 
 
 def analyze_motion(model_path: str, video_source, output_json: str, show: bool = True) -> None:
