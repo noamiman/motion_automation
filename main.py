@@ -9,7 +9,7 @@ from output.intension_predictior import write_result
 from output.automation_prompt_generator import prompt_generator_by_prob
 from output.generate_yaml import ZeroShotAutomationYAML
 
-# ---- הגדרות מרכזיות ----
+# ---- Main Settings ----
 MODEL_PATH = "yolov8n-pose.pt"
 VIDEO_SOURCE = 0  # 0 = camera, or provide a path to a video file
 
