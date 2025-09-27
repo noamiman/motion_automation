@@ -4,7 +4,6 @@ import math
 from collections import defaultdict, deque
 from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional, Tuple
-
 import numpy as np
 from ultralytics import YOLO
 
@@ -12,7 +11,7 @@ from ultralytics import YOLO
 # ---------------- Utilities ----------------
 
 def angle_3pts(a, b, c) -> float:
-    """זווית ב-B בין נקודות a-b-c במעלות."""
+    """Angle at B between points a-b-c (in degrees)."""
     a = np.asarray(a, dtype=float)
     b = np.asarray(b, dtype=float)
     c = np.asarray(c, dtype=float)
@@ -25,7 +24,7 @@ def angle_3pts(a, b, c) -> float:
 
 
 def iou_xyxy(a, b) -> float:
-    """IOU בין שתי תיבות בפורמט [x1,y1,x2,y2]."""
+    """IoU between two boxes in [x1,y1,x2,y2] format."""
     x1, y1 = max(a[0], b[0]), max(a[1], b[1])
     x2, y2 = min(a[2], b[2]), min(a[3], b[3])
     inter = max(0.0, x2 - x1) * max(0.0, y2 - y1)
@@ -39,7 +38,7 @@ def iou_xyxy(a, b) -> float:
 # ---------------- Simple IOU Tracker ----------------
 
 class SimpleTracker:
-    """מעקב IDs בסיסי באמצעות שידוך IOU בין פריימים."""
+    """Basic ID tracking via IoU matching across frames."""
     def __init__(self, iou_thresh=0.35, max_age=20):
         self.next_id = 1
         self.tracks = {}  # id -> {'bbox': [x1,y1,x2,y2], 'age': int}
@@ -50,7 +49,7 @@ class SimpleTracker:
         assigned_ids = [-1] * len(boxes)
         used = set()
 
-        # נסה לשדך לכל track תיבה חדשה
+        # Try to match a new bounding box to each track
         for tid, tinfo in list(self.tracks.items()):
             tbox = tinfo["bbox"]
             best_j, best_iou = -1, 0.0
@@ -69,7 +68,7 @@ class SimpleTracker:
                 if tinfo["age"] > self.max_age:
                     del self.tracks[tid]
 
-        # תיבות שלא שויכו → צור IDs חדשים
+        # Unassigned boxes → create new IDs
         for j, box in enumerate(boxes):
             if assigned_ids[j] == -1:
                 tid = self.next_id
@@ -84,8 +83,9 @@ class SimpleTracker:
 
 class MotionAnalyzer:
     """
-    מזהה base_state יחיד + events מרובים לכל אדם בפריים, ושומר JSON.
+    Identifies a single base_state + multiple events for each person in the frame, and saves to JSON.
     """
+
     def __init__(self,
                  model_path: str = "yolov8n-pose.pt",
                  video_source: int | str = 0,
@@ -96,21 +96,21 @@ class MotionAnalyzer:
         if not self.cap.isOpened():
             raise RuntimeError(f"Failed to open video source: {video_source}")
 
-        # מידע פריים
+        # Frame info
         w = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)) or 0
         h = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) or 0
         self.frame_size = (w, h)
         self.fps = float(self.cap.get(cv2.CAP_PROP_FPS) or 0.0)
 
-        # מעקבים
+        # Tracking
         self.tracker = SimpleTracker()
         self.prev_centers: Dict[int, Tuple[float, float]] = {}
         self.prev_areas: Dict[int, float] = {}
 
-        # החלקה ל-base_state (רוב קולות על חלון קצר)
+        # Smoothing for base_state
         self.base_hist: Dict[int, deque] = defaultdict(lambda: deque(maxlen=5))
 
-        # פלט
+        # Output
         self.output_json = output_json
         self.frames_buffer: List[Dict[str, Any]] = []
         self.frame_id = 0
@@ -121,7 +121,7 @@ class MotionAnalyzer:
 
     def _extract_person_features(self, kpts_xy: np.ndarray, bbox_xyxy: List[float]) -> Dict[str, Any]:
         """
-        kpts_xy: [num_kpts, 2] קואורדינטות בפיקסלים
+        kpts_xy: [num_kpts, 2] Coordinates in pixels
         bbox_xyxy: [x1,y1,x2,y2]
         """
         def safe_idx(i):
@@ -136,7 +136,7 @@ class MotionAnalyzer:
         r_elb, l_elb = safe_idx(7), safe_idx(8)
         r_wri, l_wri = safe_idx(9), safe_idx(10)
 
-        # מרכז גוף: ממוצע כתפיים/ירכיים אם קיים, אחרת מרכז בוקס
+        # Body center: average of shoulders/hips if available, otherwise box center
         torso_pts = []
         for p in (r_sh, l_sh, r_hip, l_hip):
             if not np.any(np.isnan(p)):
@@ -157,7 +157,7 @@ class MotionAnalyzer:
         hip_r = safe_angle(r_sh, r_hip, r_knee)
         hip_l = safe_angle(l_sh, l_hip, l_knee)
 
-        # יד מורמת? פרק יד מעל הכתף (ב־OpenCV y קטן = גבוה יותר)
+        # Raised hand? Wrist above the shoulder
         right_hand_up = (not np.any(np.isnan(r_wri)) and not np.any(np.isnan(r_sh)) and r_wri[1] < r_sh[1])
         left_hand_up  = (not np.any(np.isnan(l_wri)) and not np.any(np.isnan(l_sh)) and l_wri[1] < l_sh[1])
 
@@ -180,12 +180,12 @@ class MotionAnalyzer:
 
     def _classify_actions(self, pid: int, feats: Dict[str, Any], bbox: List[float]):
         """
-        מחזיר:
-          base_state: str (אחת)
+        Returns:
+          base_state: str (single value)
           events: List[str] (0..N)
-          conf: Dict[str,float] ציוני ביטחון
+          conf: Dict[str,float] confidence scores
         """
-        # מהירות (פיקסלים/פריים)
+        # # Speed (pixels/frame)
         prev_center = self.prev_centers.get(pid)
         cx, cy = feats["center_x"], feats["center_y"]
         speed = 0.0
@@ -194,13 +194,13 @@ class MotionAnalyzer:
             dy = cy - prev_center[1]
             speed = math.hypot(dx, dy)
 
-        # ספים – כוונון לפי סצינה/רזולוציה
+        # Thresholds — tune per scene/resolution
         FAST_T = 5.0
         SLOW_T = 1.0
         fast = speed > FAST_T
         slow = speed > SLOW_T
 
-        # זוויות
+        # Angles
         knees = [v for v in (feats.get("knee_r"), feats.get("knee_l")) if v is not None]
         hips  = [v for v in (feats.get("hip_r"),  feats.get("hip_l"))  if v is not None]
         mean_knee = float(np.mean(knees)) if knees else None
@@ -216,7 +216,7 @@ class MotionAnalyzer:
 
         # --- Events: entering/exiting_room ---
         frame_w, frame_h = self.frame_size
-        margin = 50  # פיקסלים מהקצה
+        margin = 50  # Pixels from the edge
         x1, y1, x2, y2 = bbox
         area = max(1.0, (x2 - x1) * (y2 - y1))
         prev_area = self.prev_areas.get(pid)
@@ -257,8 +257,8 @@ class MotionAnalyzer:
                 events.append("exiting_room")
                 conf["exiting_room"] = float(min(1.0, exiting_score))
 
-        # --- Base state יחיד ---
-        # היררכיה: ישיבה/כריעה > כיפוף > הליכה מהירה > תנועה קלה > עמידה
+        # --- Single base state ---
+        # Hierarchy: sitting/squatting > bending > fast walking > slight movement > standing
         base_state = "standing"
         base_conf = 0.65
 
@@ -280,7 +280,7 @@ class MotionAnalyzer:
                     base_state = "standing"
                     base_conf = 0.7
         else:
-            # ללא זוויות תקינות → תבסס על תנועה
+            # Without valid angles → base on motion
             if fast:
                 base_state = "walking_or_moving"
                 base_conf = 0.8
@@ -293,7 +293,7 @@ class MotionAnalyzer:
 
         conf["base_state"] = base_conf
 
-        # עדכון להמשך
+        # Update for subsequent frames
         self.prev_centers[pid] = (cx, cy)
         self.prev_areas[pid] = area
 
@@ -302,7 +302,7 @@ class MotionAnalyzer:
     # --------- Optional smoothing for base_state ---------
 
     def _smooth_base_state(self, pid: int, state_now: str) -> str:
-        """רוב קולות על חלון קצר כדי לייצב את מצב הבסיס."""
+        """Majority vote over a short window to stabilize the base state."""
         hist = self.base_hist[pid]
         hist.append(state_now)
         # majority vote
@@ -324,7 +324,7 @@ class MotionAnalyzer:
                 results = self.model.predict(frame, verbose=False)
                 res = results[0]
 
-                # בנה רשימת תיבות
+                # Build a list of boxes
                 boxes_xyxy: List[List[float]] = []
                 person_indices: List[int] = []
                 if res.boxes is not None and len(res.boxes) > 0:
@@ -333,22 +333,22 @@ class MotionAnalyzer:
                         boxes_xyxy.append(xyxy)
                         person_indices.append(i)
 
-                # עדכון מזהים
+                # Update IDs
                 ids = self.tracker.update(boxes_xyxy)
 
-                # קייפוינטים
+                # Keypoints
                 kpts_xy = None
                 if res.keypoints is not None and res.keypoints.xy is not None:
                     kpts_xy = res.keypoints.xy.detach().cpu().numpy()  # [N, K, 2]
 
-                # רשומת פריים לפלט
+                # Frame record for output
                 frame_entry = {
                     "frame_id": int(self.frame_id),
                     "timestamp_utc": datetime.now(timezone.utc).isoformat(),
                     "detections": []
                 }
 
-                # עיבוד לכל אדם
+                # Process each person
                 for idx, det_idx in enumerate(person_indices):
                     pid = int(ids[idx])
                     bbox = boxes_xyxy[idx]
@@ -357,7 +357,7 @@ class MotionAnalyzer:
                     if kp is not None:
                         feats = self._extract_person_features(kp, bbox)
                     else:
-                        # fallback ללא keypoints: מרכז = מרכז בוקס
+                        # Fallback without keypoints: center = box center
                         x1, y1, x2, y2 = bbox
                         feats = {
                             "center_x": (x1 + x2) / 2.0,
@@ -377,18 +377,16 @@ class MotionAnalyzer:
                         "bbox": [float(x) for x in bbox],
                         "base_state": base_state,
                         "events": events,          # 0..N
-                        "confidence": conf,        # כולל base_state
+                        "confidence": conf,        # Includes base_state
                         "features": feats
                     }
-                    # if kp is not None:
-                    #     det["keypoints"] = kp.tolist()
 
                     frame_entry["detections"].append(det)
 
-                # תצוגה
+                # Display
                 if self.show:
-                    annotated = res.plot()  # מצייר תיבות + שלדים
-                    # כתוב טקסט לכל אדם
+                    annotated = res.plot()  # Draws boxes + skeletons
+                    # Write text for each person
                     for det in frame_entry["detections"]:
                         x1, y1 = int(det["bbox"][0]), int(det["bbox"][1])
                         txt = f"id:{det['id']} {det['base_state']}"
@@ -417,8 +415,8 @@ class MotionAnalyzer:
 
 if __name__ == "__main__":
     analyzer = MotionAnalyzer(
-        model_path="yolov8n-pose.pt",   # דגם Pose (אפשר גם s/m לפי חומרה)
-        video_source=0,                 # 0 = מצלמה; או path לקובץ וידאו
+        model_path="yolov8n-pose.pt",   # Pose model (s/m also possible depending on hardware)
+        video_source=0,                 # 0 = camera; or path to a video file
         output_json="data/motion_analysis_room1.json",
         show=True
     )

@@ -1,15 +1,12 @@
-# output/zero_shot_automation_yaml.py
 from __future__ import annotations
-
 import json
 import os
 import re
 from pathlib import Path
 from typing import List, Optional, Any
 
-# ====== ניקוי פלט ======
-
-# שורות “דמויות YAML” + תמיכה במפרידי מסמכים
+# ====== Output cleanup ======
+# YAML-like lines + support for document separators
 _YAML_LINE = re.compile(
     r"""
     ^\s*$                        # empty
@@ -22,23 +19,23 @@ _YAML_LINE = re.compile(
     re.VERBOSE,
 )
 
-# fence פתיחה סובלני: ```yaml / ```yml / ``yaml / ``yml (רישיות/קטנות)
+# Lenient opening fence: ```yaml / ```yml / ```YAML / ```YML (case-insensitive)
 _FENCE_OPEN_RE  = re.compile(r"^\s*`{2,3}\s*y(?:a)?ml\s*$", re.I)
 _FENCE_CLOSE_RE = re.compile(r"^\s*`{3}\s*$")
 
 def _clean_yaml(text: str) -> str:
-    """מסיר פתיחי fence, חותך ב־fence סגירה, ומשאיר רק שורות שנראות YAML."""
+    """Removes opening fences, cuts at the closing fence, and keeps only lines that look like YAML."""
     s = (text or "").replace("\r\n", "\n").lstrip()
     lines_in = s.splitlines()
 
-    # הסרת fence פתיחה אם השורה הראשונה היא fence
+    # Remove opening fence if the first line is a fence
     if lines_in and _FENCE_OPEN_RE.match(lines_in[0]):
         lines_in = lines_in[1:]
 
     cleaned: List[str] = []
     started = False
     for ln in lines_in:
-        # עצירה על fence סגירה ```
+        # Stop at closing fence ```
         if _FENCE_CLOSE_RE.match(ln):
             break
         if not started and not ln.strip():
@@ -50,7 +47,7 @@ def _clean_yaml(text: str) -> str:
     return "\n".join(cleaned).strip()
 
 
-# ====== נרמול HA ======
+# ====== HA normalization ======
 try:
     import yaml
     _HAS_YAML = True
@@ -71,12 +68,13 @@ def _infer_domain(service: str) -> Optional[str]:
 
 def _normalize_ha_yaml(ytext: str) -> str:
     """
-    תיקונים עדינים:
-      - אם condition חסר/ריק → []
-      - action תמיד רשימה; לכל action ודא target.entity_id (placeholder לפי domain אם חסר)
+    Minor adjustments:
+      - If condition is missing/empty → []
+      - action is always a list; for each action ensure target.entity_id (use a domain-based placeholder if missing)
       - mode: single
-      - אם הוחזר list של אוטומציות — קח את הראשונה (המודל אמור להחזיר אחת)
+      - If a list of automations is returned — take the first (the model is expected to return one)
     """
+
     if not ytext.strip() or not _HAS_YAML:
         return ytext.strip()
 
@@ -85,7 +83,7 @@ def _normalize_ha_yaml(ytext: str) -> str:
     except Exception:
         return ytext.strip()
 
-    # אם הוחזרה רשימה של מסמכים — קח את הראשון התקין
+    # If a list of documents is returned — take the first valid one
     if isinstance(data, list):
         for item in data:
             if isinstance(item, dict):
@@ -100,7 +98,7 @@ def _normalize_ha_yaml(ytext: str) -> str:
     if not cond:
         data["condition"] = []
 
-    # action כ-list + הוספת target.entity_id
+    # action as a list + add target.entity_id
     acts = data.get("action", [])
     if isinstance(acts, dict):
         acts = [acts]
@@ -136,11 +134,11 @@ def _normalize_ha_yaml(ytext: str) -> str:
         return ytext.strip()
 
 
-# ====== המחלקה הראשית ======
+# ====== Main class ======
 class ZeroShotAutomationYAML:
     """
-    יצירת YAML לאוטומציות Home Assistant ב-zero-shot דרך Ollama.
-    כולל ניקוי פלט + נרמול ל-HA.
+    Generate YAML for Home Assistant automations zero-shot via Ollama.
+    Includes output cleanup + normalization for HA.
     """
 
     DEFAULT_SYSTEM_PROMPT = """You are a Home Assistant automation YAML generator.
@@ -177,10 +175,10 @@ HARD RULES
         else:
             self.system_prompt = self.DEFAULT_SYSTEM_PROMPT.rstrip()
 
-    # --- עזר פנימי: הרצה + ניקוי + נרמול ---
+    # --- Internal helper: run + cleanup + normalization ---
     def _generate_one(self, user_text: str, temperature: float = 0.0, max_new_tokens: int = 200) -> str:
         """
-        בונה prompt יציב (כולל fence פתיחה), מריץ Ollama, מנקה ונורמל ל-HA.
+        Builds a stable prompt (including an opening fence), runs Ollama, cleans up and normalizes to HA.
         """
         prompt = (
             f"{self.system_prompt}\n"
@@ -194,13 +192,13 @@ HARD RULES
                 "temperature": temperature,
                 "repeat_penalty": 1.1,
                 "num_predict": max_new_tokens,
-                "stop": ["```"],  # עצור על גדר סגירה
+                "stop": ["```"],  # Stop at closing fence
             },
         )
         raw = (resp.get("response") or "")
         cleaned = _clean_yaml(raw)
 
-        # fallback: נסה לחלץ בין fences אם הניקוי החזיר ריק
+        # Fallback: try to extract between fences if cleanup returned empty
         if not cleaned:
             m = re.search(r"```y?a?ml\s*(.*?)```", raw, flags=re.S | re.I)
             if m:
@@ -211,9 +209,9 @@ HARD RULES
     @staticmethod
     def _build_prompts_from_actions(actions: Any) -> List[str]:
         """
-        מקבל:
-          - [{"action": "...", "time": "HH:MM"}, ...]  או  ["turn on lights at 21:00", ...]
-        ומחזיר מחרוזות zero-shot בסגנון:
+        Input:
+          - [{"action": "...", "time": "HH:MM"}, ...]  or  ["turn on lights at 21:00", ...]
+        Returns zero-shot strings in the style of:
           "Create an automation that <action> at <time> with Home Assistant"
         """
         if not isinstance(actions, list):
@@ -234,7 +232,7 @@ HARD RULES
                     prompts.append(f"Create an automation that {s} with Home Assistant")
         return prompts
 
-    # --- API ראשי ---
+    # --- Main API ---
     def run(
         self,
         actions_json_path: str,
@@ -243,8 +241,8 @@ HARD RULES
         max_new_tokens: int = 200,
     ) -> List[str]:
         """
-        קורא את actions_json_path, בונה פרומפטים, מפיק YAML (נקי ומנורמל), ומחזיר רשימה.
-        אם out_path סופק – כותב קובץ רב-מסמכי (מופרד ב־'---').
+        Reads actions_json_path, builds prompts, produces YAML (cleaned and normalized), and returns a list.
+        If out_path is provided — writes a multi-document file (separated by '---').
         """
         with open(actions_json_path, "r", encoding="utf-8") as f:
             actions = json.load(f)
@@ -269,22 +267,3 @@ HARD RULES
 
 
 
-# ====== פונקציית עוטפת לשימוש נוח מה-main ======
-def generate_automation_yaml_zeroshot(
-    actions_json: str,
-    prompt_path: Optional[str],
-    model_name: str = "llama3.2:3b",
-    out_yaml_path: Optional[str] = None,
-    temperature: float = 0.0,
-    max_new_tokens: int = 200,
-) -> List[str]:
-    """
-    עטיפה נוחה: מייצר YAML ב-zero-shot דרך Ollama, כולל ניקוי ונרמול.
-    """
-    gen = ZeroShotAutomationYAML(model=model_name, system_prompt_path=prompt_path)
-    return gen.run(
-        actions_json_path=actions_json,
-        out_path=out_yaml_path,
-        temperature=temperature,
-        max_new_tokens=max_new_tokens,
-    )

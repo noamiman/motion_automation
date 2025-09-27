@@ -1,10 +1,6 @@
 [
   {
     "action": "open air-conditioner",
-    "time": "09:00"
-  },
-  {
-    "action": "lock door",
-    "time": "10:00"
+    "time": "18:00"
   }
 ]

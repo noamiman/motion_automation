@@ -1,4 +1,5 @@
 # automation_recommender.py
+# few-shot using
 import os
 import json
 import re
@@ -42,7 +43,7 @@ def _round_down_hour(h: int, m: int) -> str:
     return f"{h:02d}:00"
 
 def normalize_recommendation(text: str) -> Optional[str]:
-    """מחזיר '<action> at HH:MM' או None אם לא מזוהה."""
+    """Returns '<action> at HH:MM' or None if not recognized."""
     if not text:
         return None
     s = text.strip().lower().strip(" '\"").rstrip(".")
@@ -74,7 +75,7 @@ def intension_generator(model="llama3.2:3b", prompt="", data="") -> str:
     return resp["response"].strip()
 
 def _save_actions_json(actions: List[str], out_path: str, encoding: str = "utf-8") -> None:
-    """שומר JSON מובנה: [{"action": ..., "time": ...}, ...]."""
+    """Saves structured JSON: [{"action": ..., "time": ...}, ...]."""
     structured: List[Dict[str, str]] = []
     for act in actions:
         if " at " in act:
@@ -94,28 +95,28 @@ def prompt_generator_by_prob(
     out_actions_json_path: Optional[str] = None,
 ) -> List[str]:
     """
-    מפיק פעולות מה-LLM עבור נציגים מעל סף הסתברות, מנרמל, מסיר כפילויות,
-    מחזיר רשימה. אם ניתן out_actions_json_path – שומר גם JSON מובנה.
+    Generates actions from the LLM for candidates above a probability threshold, normalizes, removes duplicates,
+    and returns a list. If out_actions_json_path is provided — also saves structured JSON.
     """
-    # 1) קריאת נציגים
+    # 1) Read representatives
     with open(result_json_path, "r", encoding="utf-8") as f:
         reps = json.load(f).get("representatives", [])
     sentences = [r["sentence"] for r in reps if float(r.get("prob", 0.0)) >= prob]
 
-    # 2) טעינת הפרומפט
+    # 2) Load the prompt
     with open(prompt_path, "r", encoding="utf-8") as f:
         prompt = f.read()
 
-    # 3) LLM → המלצות גולמיות
+    # 3) LLM → raw recommendations
     raw_recs = [intension_generator(model=model_name, prompt=prompt, data=s) for s in sentences]
 
-    # 4) נרמול + סינון None
+    # 4) Normalize + filter None
     normalized = [norm for rec in raw_recs if (norm := normalize_recommendation(rec))]
 
-    # 5) הורדת כפילויות תוך שמירה על סדר
+    # 5) Remove duplicates while preserving order
     deduped = list(OrderedDict.fromkeys(normalized))
 
-    # 6) שמירה אופציונלית ל-JSON
+    # 6) Optional save to JSON
     if out_actions_json_path:
         _save_actions_json(deduped, out_actions_json_path)
 

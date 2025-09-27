@@ -2,7 +2,7 @@ import json
 from typing import Any, Dict, List, Union
 from datetime import datetime
 
-# ─────────────────────────── עזרי קטגוריות ───────────────────────────
+# ─────────────────────────── Category Helpers ───────────────────────────
 def _joint_cat(val: Any) -> str:
     if val is None:
         return "unknown"
@@ -32,14 +32,14 @@ def _reach_from_hands(left_up: bool, right_up: bool) -> str:
         return "both"
     return "none"
 
-# ─────────────────────────── המרה לפריים → מחרוזת ───────────────────────────
+# ─────────────────────────── Frame → String Conversion ───────────────────────────
 def frame_to_llm_string(frame: Dict[str, Any]) -> str:
     ts = frame.get("timestamp_utc")
     hour_str = "unknown"
     if ts:
         try:
             dt = datetime.fromisoformat(ts)
-            hour_str = dt.strftime("%H:%M")  # חותכים לשעות:דקות
+            hour_str = dt.strftime("%H:%M")  # Truncate to hours:minutes (HH:MM)
         except Exception:
             pass
 
@@ -72,7 +72,7 @@ def frame_to_llm_string(frame: Dict[str, Any]) -> str:
         events_list = det.get("events")
         events_str = ",".join(events_list) if events_list else "unknown"
 
-        # בניית המחרוזת
+        # Build the string
         if len(dets) > 1:
             compressor += (
                 f"state={state};"
@@ -98,20 +98,21 @@ def frame_to_llm_string(frame: Dict[str, Any]) -> str:
                 f"conf={conf}"
             )
 
-    # אם היו כמה אנשים — מחזירים את המחרוזת המשולבת
+    # If there were multiple people — return the combined string
     return compressor.rstrip(",")
 
-# ─────────────────────────── המרת קלט כללי לרשימת מחרוזות ───────────────────────────
+# ─────────────────────────── General Input → List of Strings ───────────────────────────
 def compress_motion_json(
     data: Union[str, Dict[str, Any], List[Dict[str, Any]]]
 ) -> List[str]:
     """
-    קלט:
-      - path למחרוזת קובץ JSON, או
-      - dict עם key בשם "frames": [...], או
-      - רשימה של פריימים (list[dict]) או פריים בודד (dict)
-    פלט: רשימת מחרוזות קומפקטיות—אחת לכל פריים.
+    Input:
+      - path to a JSON file (str), or
+      - dict with a key named "frames": [...], or
+      - a list of frames (list[dict]) or a single frame (dict)
+    Output: a list of compact strings—one per frame.
     """
+
     if isinstance(data, str):
         with open(data, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -127,16 +128,17 @@ def compress_motion_json(
 
     return [frame_to_llm_string(fr) for fr in frames]
 
-# ─────────────────────────── פונקציית כתיבה לייצוא ───────────────────────────
+# ─────────────────────────── Export Writing Function ───────────────────────────
 def save_compressed_events(
     data_or_path: Union[str, Dict[str, Any], List[Dict[str, Any]]],
     out_path: str,
     file_encoding: str = "utf-8",
 ) -> int:
     """
-    ממיר את הקלט (path/obj) לרשימת מחרוזות ושומר לקובץ טקסט—שורה לכל פריים.
-    מחזיר את מספר השורות שנכתבו.
+    Converts the input (path/obj) into a list of strings and writes them to a text file—one line per frame.
+    Returns the number of lines written.
     """
+
     lines = compress_motion_json(data_or_path)
     with open(out_path, "w", encoding=file_encoding) as f:
         for s in lines:
@@ -145,12 +147,3 @@ def save_compressed_events(
 
     return len(lines)
 
-# # אופציונלי: הרצה כ־CLI פשוט
-# if __name__ == "__main__":
-#     import argparse
-#     parser = argparse.ArgumentParser(description="Compress motion JSON and save to txt.")
-#     parser.add_argument("input", help="Path to JSON file or directory-like data")
-#     parser.add_argument("output", help="Path to output txt file")
-#     args = parser.parse_args()
-#     n = save_compressed_events(args.input, args.output)
-#     print(f"Wrote {n} lines to {args.output}")
