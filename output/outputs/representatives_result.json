@@ -1,0 +1,168 @@
+{
+  "representatives": [
+    {
+      "sentence": "The person is likely preparing to bend their right knee at 18:12.",
+      "count": 16,
+      "prob": 0.1951219512195122
+    },
+    {
+      "sentence": "The person is likely preparing to bend their knees, as indicated by the \"bend\" event at 18:12.",
+      "count": 4,
+      "prob": 0.04878048780487805
+    },
+    {
+      "sentence": "The person is leaning forward slightly, indicating a potential interest in the content at HH:12.",
+      "count": 1,
+      "prob": 0.012195121951219513
+    },
+    {
+      "sentence": "The person is likely reaching for something at 18:12.",
+      "count": 23,
+      "prob": 0.2804878048780488
+    },
+    {
+      "sentence": "The person is likely preparing to exit the room by exiting at 18:12.",
+      "count": 8,
+      "prob": 0.0975609756097561
+    },
+    {
+      "sentence": "The person is likely preparing to bend their left or right arm at 18:12.",
+      "count": 2,
+      "prob": 0.024390243902439025
+    },
+    {
+      "sentence": "The person is leaning forward slightly, indicating a preparation for movement at 18:12.",
+      "count": 1,
+      "prob": 0.012195121951219513
+    },
+    {
+      "sentence": "The person is likely preparing to stand up, as they are raising their hands and bending their knees at 18:12.",
+      "count": 5,
+      "prob": 0.06097560975609756
+    },
+    {
+      "sentence": "The person is likely preparing to perform a physical action, possibly related to communication or expression, at 18:12.",
+      "count": 4,
+      "prob": 0.04878048780487805
+    },
+    {
+      "sentence": "The person is likely preparing to interact with something by raising their hand at 18:12.",
+      "count": 5,
+      "prob": 0.06097560975609756
+    },
+    {
+      "sentence": "The person is likely preparing to exit the room by raising their hand and bending their body, at 18:12.",
+      "count": 3,
+      "prob": 0.036585365853658534
+    },
+    {
+      "sentence": "The person is likely preparing to interact with something or someone by raising their hand and entering the room at 18:12.",
+      "count": 4,
+      "prob": 0.04878048780487805
+    },
+    {
+      "sentence": "The person is likely preparing to exit the room by standing up from a sitting or squatting position at 18:12.",
+      "count": 2,
+      "prob": 0.024390243902439025
+    },
+    {
+      "sentence": "The person is likely preparing to perform a physical action, possibly related to the bending or reaching movements, at 18:12.",
+      "count": 2,
+      "prob": 0.024390243902439025
+    },
+    {
+      "sentence": "The person is likely preparing to speak or make a statement, as indicated by the action of raising their hand at 18:12.",
+      "count": 1,
+      "prob": 0.012195121951219513
+    },
+    {
+      "sentence": "The person is likely preparing to raise their hand at 18:12.",
+      "count": 1,
+      "prob": 0.012195121951219513
+    }
+  ],
+  "origin_detections": [
+    "The person is preparing to bend their knees, likely getting ready to squat or sit down, at 18:12.",
+    "The person is likely preparing to perform a deep bend, as indicated by the 'bend' event at 18:12.",
+    "The person is leaning forward slightly, indicating a potential interest in the content at HH:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to exit the room by exiting it, at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to exit the room by exiting it at 18:12.",
+    "The person is likely preparing to exit the room by exiting it at 18:12.",
+    "The person is likely preparing to exit the room by bending their knees and standing up, at 18:12.\nThe person then exits the room, at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position, as indicated by the bending and reaching actions at 18:12.",
+    "The person is likely preparing to stand up, as they are bending their knees and reaching for something at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly reaching for something, at 18:12.",
+    "The person is likely preparing to perform a deep bend, as indicated by the 'bend' event at HH:12.",
+    "The person is likely preparing to bend their left or right leg, as indicated by the \"bend\" event at 18:12.",
+    "The person is likely preparing to bend their knees, with a slight movement of the left knee and deep bends in both right and left legs at 18:12.",
+    "The person is leaning forward slightly, indicating a preparation for movement at 18:12.",
+    "The person is likely preparing to bend their left or right arm at 18:12.",
+    "The person is likely preparing to bend their knees, as indicated by the \"bend\" events at 18:12.",
+    "The person is likely preparing to bend their knees, as indicated by the \"bend\" event at 18:12.",
+    "The person is likely reaching for something at 18:12.\nThe action time is 18:12.",
+    "The person is likely reaching for something at 18:12.\nThe action time is 18:12.",
+    "The person is likely preparing to stand up, as indicated by the raising of both hands and bending movements at 18:12.",
+    "The person is likely preparing to exit the room by standing up, at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly related to communication or expression, at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly related to communication or expression, at 18:12.",
+    "The person is likely preparing to interact with the input by raising their hand, at 18:12.",
+    "The person is likely preparing to stand up, as they are bending their knees and reaching for something at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly related to communication or expression, at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position at 18:12.",
+    "The person is likely preparing to exit the room by raising their hand and bending their body, at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position, as indicated by the \"raising_hand\" event at 18:12.",
+    "The person is likely preparing to stand up, as they are raising their hands and bending their knees at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position, as indicated by the raising of both hands and bending of the knees. at 18:12.",
+    "The person is likely preparing to exit the room by raising their hand and bending their body, at 18:12.",
+    "The person is likely preparing to exit the room by raising their hand, at 18:12.",
+    "The person is likely preparing to exit the room by standing up, at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position, as indicated by the bending and raising of their hands at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position at 18:12.",
+    "The person is likely preparing to interact with something or someone by raising their hand and entering the room, at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly related to communication or expression, at 18:12.",
+    "The person is likely preparing to interact with something by raising their hand, at 18:12.",
+    "The person is likely preparing to exit the room by standing up from a sitting or squatting position at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly related to the bending or reaching movements, at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to exit the room by exiting at 18:12.",
+    "The person is likely reaching for something with their left hand at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly related to the bending or reaching movements, at 18:12.",
+    "The person is likely preparing to interact with the input by raising their hand, at 18:12.",
+    "The person is likely preparing to speak or make a statement, as indicated by the action of raising their hand at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to stand up, as they are bending their knees and reaching for something with their left hand at 18:12.",
+    "The person is likely preparing to exit the room by standing up from a sitting or squatting position at 18:12.",
+    "The person is likely preparing to interact with something or someone by raising their hand and entering the room, at 18:12.",
+    "The person is likely preparing to interact with the input by raising their hand, at 18:12.",
+    "The person is likely preparing to interact with something by raising their hand at 18:12.",
+    "The person is likely reaching for something at 18:12.\nThe action time is 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely reaching for something at 18:12.\nAt 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to exit the room by raising their hand and bending their body, at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely preparing to interact with something or someone by raising their hand and entering the room at 18:12.",
+    "The person is likely preparing to stand up from a sitting or squatting position, as indicated by the bend and reach events at 18:12.",
+    "The person is likely preparing to interact with something in front of them, possibly by reaching out or grasping it, at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely reaching for something at 18:12.",
+    "The person is likely reaching for something at 18:12.\nNo further information can be determined.",
+    "The person is likely preparing to bend their right knee at 18:12.",
+    "The person is likely preparing to bend their knees, as indicated by the 'bend' events at 18:12.",
+    "The person is likely preparing to raise their hand at 18:12.",
+    "The person is likely preparing to perform a physical action, possibly reaching for something, at 18:12.",
+    "The person is likely preparing to stand up, as they are bending their knees and reaching for something at 18:12.",
+    "The person is likely preparing to stand up, as they are bending their knees and reaching for something at 18:12.",
+    "The person is likely preparing to stand up, as they are bending their knees and hips in preparation for rising from a seated position at 18:12.",
+    "The person is likely preparing to stand up, as indicated by the bending of their legs and raising of their hands at 18:12."
+  ]
+}
