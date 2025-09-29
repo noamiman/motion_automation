@@ -103,7 +103,7 @@ Motion_Analysis/
 
 ## Pipeline Diagram
 
-<img width="711" height="701" alt="pipeline-diagram" src="https://github.com/user-attachments/assets/64d9e12f-365a-43d3-9223-a7e0659a58c3" />
+<img width="821" height="786" alt="pipeline-diagram" src="https://github.com/user-attachments/assets/53ee6477-094a-42ea-93a7-9ab355715bec" />
 
 ---
 
