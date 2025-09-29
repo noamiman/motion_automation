@@ -1,7 +1,8 @@
-# motion_automation
+# Smart Home Motion Automation Project
 
-Smart-home **automation recommendation** pipeline that observes motion from a camera/video feed, summarizes activity, predicts **user intentions**, and emits **actionable YAML automations** ready for a Home-Assistant–style setup.
+The next smart home won’t be a pile of brittle “if-this-then-that” rules—it will understand routines, explain its choices, and keep you in control. I’m building this project as a step toward that future: an end-to-end engine that watches a camera/video feed, summarizes activity, infers user intentions, and proposes auditable, Home-Assistant–ready YAML automations.
 
+I’m enthusiastic about the space and improving fast. This repo is designed to be practical, private (local by default), and modular, so it can evolve with real households and real feedback—turning raw motion into helpful, transparent automations you actually trust.
 > End-to-end: **YOLOv8-Pose** (OpenCV) → event compression → **LLM intent prediction** (few-shot & zero-shot) → **cosine-similarity** filtering → **YAML** generation.
 
 ---
@@ -15,14 +16,11 @@ Smart-home **automation recommendation** pipeline that observes motion from a ca
 - [Pipeline Diagram](#pipeline-diagram)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
   - [Quick Start](#quick-start)
-- [Configuration](#configuration)
-- [Example Output (YAML)](#example-output-yaml)
-- [Development Notes](#development-notes)
+  - [Artifacts](#artifacts)
 - [Future Work](#future-work)
 - [License](#license)
-
+- [Conclusion](#conclusion)
 ---
 
 ## Highlights
