@@ -184,3 +184,9 @@ https://huggingface.co/meta-llama/Llama-3.2-3B/blob/main/LICENSE.txt
 # Conclusion
 
 This project was an end-to-end exploration across CV (YOLOv8-Pose), representation learning (cosine similarity), and local LLMs (Ollama) to turn raw motion into actionable YAML automations. I intentionally tried many technologies; while some choices aren’t the most efficient yet, the exercise delivered a working pipeline and clear insight into what to improve. I’m enthusiastic about the problem space and committed to iterating quickly, measuring results, and raising engineering rigor with each revision.
+
+
+### 🤝 Let's Connect!
+Thanks for checking out my project!
+I'm always happy to connect with other data & travel tech enthusiasts.
+Find me on [LinkedIn](https://www.linkedin.com/in/noamiman/)
