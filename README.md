@@ -59,6 +59,7 @@ All five stages are orchestrated by [`main.py`](./main.py):
 ---
 # Repository Structure
 
+```text
 Motion_Analysis/
 ├─ detection/
 │  ├─ data/
@@ -116,7 +117,7 @@ Motion_Analysis/
     ollama pull llama3.2:3b
 - (Optional) GPU for faster YOLOv8-Pose inference
 
-    
+    ```bash
     git clone https://github.com/noamiman/motion_automation.git
     cd motion_automation
     
@@ -178,4 +179,10 @@ Run:
 - Deployment: Docker compose with GPU support; optional web UI for reviewing events and proposed automations.
 
 # License
+## llama3.2:3b
 https://huggingface.co/meta-llama/Llama-3.2-3B/blob/main/LICENSE.txt
+
+
+# Conclusion
+
+This project was an end-to-end exploration across CV (YOLOv8-Pose), representation learning (cosine similarity), and local LLMs (Ollama) to turn raw motion into actionable YAML automations. I intentionally tried many technologies; while some choices aren’t the most efficient yet, the exercise delivered a working pipeline and clear insight into what to improve. I’m enthusiastic about the problem space and committed to iterating quickly, measuring results, and raising engineering rigor with each revision.
