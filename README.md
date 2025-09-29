@@ -73,11 +73,11 @@ Motion_Analysis/
 │  ├─ automation_prompt_generator.py
 │  ├─ generate_yaml.py
 │  └─ intension_predictior.py
-└─ prompts/
-   ├─ intension_prompt.txt
-   └─ prompt_for_auto.txt
-└─  main.py
-
+├─ prompts/
+│  ├─ intension_prompt.txt
+│  └─ prompt_for_auto.txt
+└─ main.py
+```
 ---
 
 ## Tech & Techniques
