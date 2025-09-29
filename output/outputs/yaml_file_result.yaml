@@ -1,14 +1,16 @@
 automation:
-  id: open_ac_at_1800
-  alias: Open AC at 18:00
+  id: open_ac_at_8pm
+  alias: Open AC at 8pm
   trigger:
   - platform: time
-    at: '18:00:00'
+    at: '20:00:00'
   condition: []
   action:
-    service: climate.turn_on
-  mode: single
-  target:
-    entity_id: cover.living_room
+    service: climate
+    target:
+      entity_id: cover.living_room
+    mode: single
+    data:
+      climate: turn_on
 condition: []
 mode: single

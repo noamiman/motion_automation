@@ -2,318 +2,60 @@
   "frames": [
     {
       "frame_id": 0,
-      "timestamp_utc": "2025-09-27T18:12:02.233937+00:00",
-      "detections": []
+      "timestamp_utc": "2025-09-27T21:00:57.586152+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            272.11724853515625,
+            401.1092224121094,
+            1616.518798828125,
+            1072.284423828125
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 986.234130859375,
+            "center_y": 1080.0,
+            "knee_r": 78.67382240116575,
+            "knee_l": 83.6267345257513,
+            "hip_r": 84.83997295372087,
+            "hip_l": 75.91385240937839,
+            "right_hand_up": true,
+            "left_hand_up": false,
+            "right_wrist": [
+              1290.9971923828125,
+              1064.0372314453125
+            ],
+            "left_wrist": [
+              378.9754333496094,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
     },
     {
       "frame_id": 1,
-      "timestamp_utc": "2025-09-27T18:12:02.548166+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 2,
-      "timestamp_utc": "2025-09-27T18:12:02.657523+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 3,
-      "timestamp_utc": "2025-09-27T18:12:03.054633+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 4,
-      "timestamp_utc": "2025-09-27T18:12:03.190924+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 5,
-      "timestamp_utc": "2025-09-27T18:12:03.359447+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 6,
-      "timestamp_utc": "2025-09-27T18:12:03.454827+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 7,
-      "timestamp_utc": "2025-09-27T18:12:03.522606+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 8,
-      "timestamp_utc": "2025-09-27T18:12:03.620693+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 9,
-      "timestamp_utc": "2025-09-27T18:12:03.694894+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 10,
-      "timestamp_utc": "2025-09-27T18:12:03.799544+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 11,
-      "timestamp_utc": "2025-09-27T18:12:03.890617+00:00",
+      "timestamp_utc": "2025-09-27T21:00:58.255139+00:00",
       "detections": [
         {
           "id": 1,
           "bbox": [
-            26.602294921875,
-            6.55352783203125,
-            1749.7606201171875,
-            1074.2220458984375
+            194.80499267578125,
+            423.0024108886719,
+            1604.939208984375,
+            1078.778076171875
           ],
           "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1032.618408203125,
-            "center_y": 832.47412109375,
-            "knee_r": 43.30456871194003,
-            "knee_l": 19.33667346287623,
-            "hip_r": 126.18841934308445,
-            "hip_l": 93.67888333939399,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1328.51953125,
-              882.3031005859375
-            ],
-            "left_wrist": [
-              544.909423828125,
-              820.6699829101562
-            ],
-            "right_shoulder_y": 726.4597778320312,
-            "left_shoulder_y": 721.1978759765625
-          }
-        },
-        {
-          "id": 2,
-          "bbox": [
-            0.5126495361328125,
-            22.16436767578125,
-            702.2647094726562,
-            1068.9005126953125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 214.9649658203125,
-            "center_y": 540.2550048828125,
-            "knee_r": 40.657474317612625,
-            "knee_l": 30.00571234011357,
-            "hip_r": 1.6653713500526521,
-            "hip_l": 0.09909445994328128,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              277.33050537109375,
-              915.2492065429688
-            ],
-            "left_wrist": [
-              276.0269775390625,
-              883.9012451171875
-            ],
-            "right_shoulder_y": 285.5198974609375,
-            "left_shoulder_y": 269.7623291015625
-          }
-        },
-        {
-          "id": 3,
-          "bbox": [
-            626.4940795898438,
-            21.1175537109375,
-            1685.0416259765625,
-            1067.19921875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1079.214111328125,
-            "center_y": 879.5850830078125,
-            "knee_r": 56.116507580117776,
-            "knee_l": 41.4543140064327,
-            "hip_r": 115.77752880534855,
-            "hip_l": 67.25573212285347,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1335.3314208984375,
-              865.3090209960938
-            ],
-            "left_wrist": [
-              668.5889892578125,
-              770.8828735351562
-            ],
-            "right_shoulder_y": 779.3486938476562,
-            "left_shoulder_y": 736.15966796875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 12,
-      "timestamp_utc": "2025-09-27T18:12:03.984987+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            7.227447509765625,
-            28.58880615234375,
-            1490.3670654296875,
-            1057.3656005859375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 891.5243530273438,
-            "center_y": 605.3447875976562,
-            "knee_r": 112.41780046930911,
-            "knee_l": 83.9797805849545,
-            "hip_r": 161.58785925280188,
-            "hip_l": 151.48522268122383,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1004.744384765625,
-              386.758056640625
-            ],
-            "left_wrist": [
-              985.4879150390625,
-              701.9486083984375
-            ],
-            "right_shoulder_y": 337.1741027832031,
-            "left_shoulder_y": 404.1169738769531
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 13,
-      "timestamp_utc": "2025-09-27T18:12:04.051071+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 14,
-      "timestamp_utc": "2025-09-27T18:12:04.126687+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            1157.8128662109375,
-            22.488189697265625,
-            1919.4400634765625,
-            1076.757080078125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 1699.569091796875,
-            "center_y": 920.1837158203125,
-            "knee_r": 136.86324412275783,
-            "knee_l": 115.8953774550652,
-            "hip_r": 29.09957093201573,
-            "hip_l": 32.277093890584574,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1415.36474609375,
-              1056.8096923828125
-            ],
-            "left_wrist": [
-              1444.2220458984375,
-              1043.5218505859375
-            ],
-            "right_shoulder_y": 757.1241455078125,
-            "left_shoulder_y": 763.6106567382812
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 15,
-      "timestamp_utc": "2025-09-27T18:12:04.219473+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 16,
-      "timestamp_utc": "2025-09-27T18:12:04.288467+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 17,
-      "timestamp_utc": "2025-09-27T18:12:04.356666+00:00",
-      "detections": [
-        {
-          "id": 4,
-          "bbox": [
-            1649.22265625,
-            576.390380859375,
-            1919.2918701171875,
-            1079.8677978515625
-          ],
-          "base_state": "bending",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 1783.0841064453125,
-            "center_y": 1067.978515625,
-            "knee_r": 173.45639614577675,
-            "knee_l": 178.92816391057508,
-            "hip_r": 78.30634279589454,
-            "hip_l": 74.01475476332618,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1817.9945068359375,
-              981.3543701171875
-            ],
-            "left_wrist": [
-              1729.6744384765625,
-              985.5997924804688
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1031.9141845703125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 18,
-      "timestamp_utc": "2025-09-27T18:12:04.452820+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            16.17333984375,
-            32.4744873046875,
-            1920.0,
-            1076.0428466796875
-          ],
-          "base_state": "walking_or_moving",
           "events": [
             "raising_hand"
           ],
@@ -322,112 +64,199 @@
             "base_state": 0.85
           },
           "features": {
-            "center_x": 1016.1376342773438,
-            "center_y": 938.4874877929688,
-            "knee_r": 139.7393521065831,
-            "knee_l": 129.05271485392356,
-            "hip_r": 146.03421183778462,
-            "hip_l": 98.52767451462294,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1341.779052734375,
-              1020.4393310546875
-            ],
-            "left_wrist": [
-              698.7266845703125,
-              901.6051025390625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 998.004150390625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 19,
-      "timestamp_utc": "2025-09-27T18:12:04.521098+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            453.80328369140625,
-            394.3120422363281,
-            1917.2894287109375,
-            1077.791748046875
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1103.1617431640625,
+            "center_x": 951.376220703125,
             "center_y": 1080.0,
-            "knee_r": 81.44462654351808,
-            "knee_l": 19.603176978869488,
-            "hip_r": 139.85225890546718,
-            "hip_l": 156.68643683918918,
+            "knee_r": 43.14182971525729,
+            "knee_l": 104.8411022016588,
+            "hip_r": 50.98762017885353,
+            "hip_l": 100.15901089680813,
             "right_hand_up": true,
             "left_hand_up": true,
             "right_wrist": [
-              1184.2899169921875,
-              948.7090454101562
+              1270.3455810546875,
+              1067.589111328125
             ],
             "left_wrist": [
-              598.8988037109375,
-              952.940185546875
+              405.6059265136719,
+              1062.3909912109375
             ],
             "right_shoulder_y": 1080.0,
             "left_shoulder_y": 1080.0
           }
         },
         {
-          "id": 5,
+          "id": 2,
           "bbox": [
-            0.0,
-            69.76171875,
-            216.5695037841797,
-            1066.5032958984375
+            681.7051391601562,
+            422.6372985839844,
+            1596.4969482421875,
+            1066.033935546875
           ],
           "base_state": "sitting_or_squatting",
-          "events": [],
+          "events": [
+            "raising_hand"
+          ],
           "confidence": {
+            "raising_hand": 0.9,
             "base_state": 0.85
           },
           "features": {
-            "center_x": 74.21658325195312,
-            "center_y": 976.726806640625,
-            "knee_r": 46.41198961467163,
-            "knee_l": 13.02438351301601,
-            "hip_r": 85.10192083304824,
-            "hip_l": 108.4955629202119,
+            "center_x": 1082.5220947265625,
+            "center_y": 1069.17529296875,
+            "knee_r": 49.60916570943219,
+            "knee_l": 128.45883706142982,
+            "hip_r": 92.40392043590383,
+            "hip_l": 94.11085207250878,
             "right_hand_up": false,
-            "left_hand_up": false,
+            "left_hand_up": true,
             "right_wrist": [
-              30.38671875,
-              1040.0419921875
+              1325.66796875,
+              1078.583740234375
             ],
             "left_wrist": [
-              38.0942497253418,
-              1043.1484375
+              843.240478515625,
+              1049.472900390625
             ],
-            "right_shoulder_y": 899.2893676757812,
-            "left_shoulder_y": 896.9976806640625
+            "right_shoulder_y": 1068.8662109375,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 2,
+      "timestamp_utc": "2025-09-27T21:00:58.382533+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            237.8297882080078,
+            424.1958923339844,
+            1609.103759765625,
+            1078.71728515625
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 950.4346923828125,
+            "center_y": 1080.0,
+            "knee_r": 43.64405123538198,
+            "knee_l": 107.45193086067113,
+            "hip_r": 50.9029215546482,
+            "hip_l": 101.39084484614055,
+            "right_hand_up": true,
+            "left_hand_up": true,
+            "right_wrist": [
+              1259.4422607421875,
+              1066.7958984375
+            ],
+            "left_wrist": [
+              417.6610412597656,
+              1065.319580078125
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
           }
         },
         {
           "id": 2,
           "bbox": [
-            0.0,
-            10.6922607421875,
-            588.7284545898438,
-            1067.7606201171875
+            692.1099243164062,
+            424.06439208984375,
+            1593.0230712890625,
+            1066.8134765625
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 1074.3204345703125,
+            "center_y": 1070.902099609375,
+            "knee_r": 51.70486958574207,
+            "knee_l": 145.76367614212197,
+            "hip_r": 91.12802472346405,
+            "hip_l": 97.124311657613,
+            "right_hand_up": false,
+            "left_hand_up": true,
+            "right_wrist": [
+              1300.2066650390625,
+              1074.1180419921875
+            ],
+            "left_wrist": [
+              847.8563232421875,
+              1044.5225830078125
+            ],
+            "right_shoulder_y": 1072.1884765625,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 3,
+      "timestamp_utc": "2025-09-27T21:00:58.627408+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            350.6345520019531,
+            417.77593994140625,
+            1547.9688720703125,
+            1074.28857421875
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "exiting_room"
+          ],
+          "confidence": {
+            "exiting_room": 1.0,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 937.3576049804688,
+            "center_y": 1080.0,
+            "knee_r": 60.57548569040837,
+            "knee_l": 92.72576139080687,
+            "hip_r": 65.26596876700462,
+            "hip_l": 85.64997752255249,
+            "right_hand_up": false,
+            "left_hand_up": false,
+            "right_wrist": [
+              1191.364013671875,
+              1080.0
+            ],
+            "left_wrist": [
+              506.69952392578125,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 4,
+      "timestamp_utc": "2025-09-27T21:00:58.757724+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            318.9814453125,
+            414.9588623046875,
+            1552.6329345703125,
+            1074.45166015625
           ],
           "base_state": "sitting_or_squatting",
           "events": [],
@@ -435,86 +264,551 @@
             "base_state": 0.85
           },
           "features": {
-            "center_x": 113.27877807617188,
-            "center_y": 857.2313232421875,
-            "knee_r": 130.44004721185067,
-            "knee_l": 149.70202159377925,
-            "hip_r": 179.21644422110123,
-            "hip_l": 160.28157958578768,
+            "center_x": 938.07861328125,
+            "center_y": 1080.0,
+            "knee_r": 63.370424832317596,
+            "knee_l": 90.27683365753282,
+            "hip_r": 66.51303519094996,
+            "hip_l": 83.25467615045481,
             "right_hand_up": false,
             "left_hand_up": false,
             "right_wrist": [
-              105.51457214355469,
-              1022.8740234375
+              1208.7752685546875,
+              1080.0
             ],
             "left_wrist": [
-              25.661956787109375,
-              1032.1656494140625
+              458.1552734375,
+              1080.0
             ],
-            "right_shoulder_y": 779.3870239257812,
-            "left_shoulder_y": 769.476806640625
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
           }
         }
       ]
     },
     {
-      "frame_id": 20,
-      "timestamp_utc": "2025-09-27T18:12:04.585747+00:00",
+      "frame_id": 5,
+      "timestamp_utc": "2025-09-27T21:00:58.841709+00:00",
       "detections": [
         {
           "id": 1,
           "bbox": [
-            51.803466796875,
-            361.05560302734375,
-            1909.5758056640625,
-            1076.999267578125
+            317.521728515625,
+            414.4271240234375,
+            1555.60400390625,
+            1072.971435546875
           ],
-          "base_state": "walking_or_moving",
+          "base_state": "sitting_or_squatting",
           "events": [
-            "raising_hand",
-            "entering_room"
+            "raising_hand"
           ],
           "confidence": {
             "raising_hand": 0.9,
-            "entering_room": 1.0,
             "base_state": 0.85
           },
           "features": {
-            "center_x": 922.3607177734375,
-            "center_y": 1079.582275390625,
-            "knee_r": 108.09285870414854,
-            "knee_l": 23.458687704116613,
-            "hip_r": 135.26215179127306,
-            "hip_l": 154.03199842538368,
+            "center_x": 934.496826171875,
+            "center_y": 1080.0,
+            "knee_r": 60.859250808247495,
+            "knee_l": 89.02678940248359,
+            "hip_r": 64.13778426877752,
+            "hip_l": 83.69881608334562,
             "right_hand_up": true,
             "left_hand_up": true,
             "right_wrist": [
-              1339.38427734375,
-              969.2188110351562
+              1211.868896484375,
+              1079.6492919921875
             ],
             "left_wrist": [
-              448.5870666503906,
-              968.4314575195312
+              434.7181396484375,
+              1077.0
             ],
             "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1078.3292236328125
+            "left_shoulder_y": 1080.0
           }
         }
       ]
     },
     {
-      "frame_id": 21,
-      "timestamp_utc": "2025-09-27T18:12:04.653948+00:00",
+      "frame_id": 6,
+      "timestamp_utc": "2025-09-27T21:00:58.942684+00:00",
       "detections": [
         {
           "id": 1,
           "bbox": [
-            7.29510498046875,
-            382.7568054199219,
-            1694.9326171875,
-            1072.4267578125
+            330.75091552734375,
+            410.0129699707031,
+            1569.8880615234375,
+            1074.485107421875
           ],
-          "base_state": "walking_or_moving",
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 920.3603515625,
+            "center_y": 1080.0,
+            "knee_r": 57.8390963051356,
+            "knee_l": 93.40322277472752,
+            "hip_r": 61.22936665598889,
+            "hip_l": 88.23608669912294,
+            "right_hand_up": true,
+            "left_hand_up": true,
+            "right_wrist": [
+              1230.520751953125,
+              1073.0047607421875
+            ],
+            "left_wrist": [
+              441.1994934082031,
+              1065.607177734375
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 7,
+      "timestamp_utc": "2025-09-27T21:00:59.041017+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            318.7579040527344,
+            408.83184814453125,
+            1566.4033203125,
+            1076.2354736328125
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 933.4644775390625,
+            "center_y": 1080.0,
+            "knee_r": 54.97056058776045,
+            "knee_l": 94.47128618674071,
+            "hip_r": 61.07081810813565,
+            "hip_l": 88.56499084163582,
+            "right_hand_up": true,
+            "left_hand_up": false,
+            "right_wrist": [
+              1238.2430419921875,
+              1069.959228515625
+            ],
+            "left_wrist": [
+              469.67449951171875,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 8,
+      "timestamp_utc": "2025-09-27T21:00:59.135762+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            335.38018798828125,
+            410.596923828125,
+            1587.699462890625,
+            1075.9154052734375
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 929.9645385742188,
+            "center_y": 1080.0,
+            "knee_r": 54.92542040794146,
+            "knee_l": 101.29338905015707,
+            "hip_r": 60.477408599341686,
+            "hip_l": 90.8897983028087,
+            "right_hand_up": true,
+            "left_hand_up": true,
+            "right_wrist": [
+              1253.1278076171875,
+              1067.2965087890625
+            ],
+            "left_wrist": [
+              455.4111328125,
+              1067.5616455078125
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 9,
+      "timestamp_utc": "2025-09-27T21:00:59.207931+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            281.55340576171875,
+            411.76824951171875,
+            1582.751953125,
+            1077.66943359375
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 937.779541015625,
+            "center_y": 1080.0,
+            "knee_r": 56.79975424501654,
+            "knee_l": 94.51147181065416,
+            "hip_r": 62.50360267526442,
+            "hip_l": 86.5554801427584,
+            "right_hand_up": true,
+            "left_hand_up": false,
+            "right_wrist": [
+              1244.117919921875,
+              1072.7515869140625
+            ],
+            "left_wrist": [
+              469.70794677734375,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 10,
+      "timestamp_utc": "2025-09-27T21:00:59.297972+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            151.47125244140625,
+            411.2306213378906,
+            1613.312255859375,
+            1077.5548095703125
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 926.7432250976562,
+            "center_y": 1080.0,
+            "knee_r": 38.75439527177331,
+            "knee_l": 111.68735245055156,
+            "hip_r": 45.42774477764506,
+            "hip_l": 106.79140486960704,
+            "right_hand_up": true,
+            "left_hand_up": true,
+            "right_wrist": [
+              1270.5093994140625,
+              1067.9351806640625
+            ],
+            "left_wrist": [
+              359.4011535644531,
+              1036.9461669921875
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 11,
+      "timestamp_utc": "2025-09-27T21:00:59.367183+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            280.446533203125,
+            409.2136535644531,
+            1564.7816162109375,
+            1074.44384765625
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 922.8638916015625,
+            "center_y": 1080.0,
+            "knee_r": 54.7099644283896,
+            "knee_l": 94.88757098350587,
+            "hip_r": 60.3739872003493,
+            "hip_l": 89.01125020292532,
+            "right_hand_up": true,
+            "left_hand_up": true,
+            "right_wrist": [
+              1232.1031494140625,
+              1071.5859375
+            ],
+            "left_wrist": [
+              432.04248046875,
+              1065.402099609375
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 12,
+      "timestamp_utc": "2025-09-27T21:00:59.437630+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            268.98577880859375,
+            410.2022399902344,
+            1572.8741455078125,
+            1074.0565185546875
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 927.4522705078125,
+            "center_y": 1080.0,
+            "knee_r": 54.638376720684406,
+            "knee_l": 92.07844963266832,
+            "hip_r": 60.8889676389719,
+            "hip_l": 89.281694163517,
+            "right_hand_up": true,
+            "left_hand_up": true,
+            "right_wrist": [
+              1231.0543212890625,
+              1072.430908203125
+            ],
+            "left_wrist": [
+              455.28094482421875,
+              1066.26025390625
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 13,
+      "timestamp_utc": "2025-09-27T21:00:59.534913+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            289.8697204589844,
+            413.62078857421875,
+            1568.495849609375,
+            1077.5029296875
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [],
+          "confidence": {
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 928.087646484375,
+            "center_y": 1080.0,
+            "knee_r": 50.03509521422539,
+            "knee_l": 92.01783361033624,
+            "hip_r": 57.94512129509506,
+            "hip_l": 89.70091261663909,
+            "right_hand_up": false,
+            "left_hand_up": false,
+            "right_wrist": [
+              1229.44677734375,
+              1080.0
+            ],
+            "left_wrist": [
+              474.434814453125,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 14,
+      "timestamp_utc": "2025-09-27T21:00:59.598062+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            295.22003173828125,
+            407.5618591308594,
+            1587.0494384765625,
+            1076.407958984375
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 926.064697265625,
+            "center_y": 1080.0,
+            "knee_r": 51.27096393201537,
+            "knee_l": 92.09441647211197,
+            "hip_r": 58.88491516198249,
+            "hip_l": 89.96607160644436,
+            "right_hand_up": true,
+            "left_hand_up": true,
+            "right_wrist": [
+              1247.01708984375,
+              1074.372314453125
+            ],
+            "left_wrist": [
+              467.0472412109375,
+              1066.3408203125
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 15,
+      "timestamp_utc": "2025-09-27T21:00:59.664261+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            266.13128662109375,
+            411.44305419921875,
+            1588.0177001953125,
+            1075.847900390625
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [],
+          "confidence": {
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 937.3784790039062,
+            "center_y": 1080.0,
+            "knee_r": 52.47938212743196,
+            "knee_l": 85.08411363295507,
+            "hip_r": 60.75605330214826,
+            "hip_l": 88.2954652522301,
+            "right_hand_up": false,
+            "left_hand_up": false,
+            "right_wrist": [
+              1220.1236572265625,
+              1080.0
+            ],
+            "left_wrist": [
+              464.2809753417969,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 16,
+      "timestamp_utc": "2025-09-27T21:00:59.734317+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            255.32867431640625,
+            410.5522155761719,
+            1589.544921875,
+            1077.0494384765625
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 933.4481201171875,
+            "center_y": 1080.0,
+            "knee_r": 52.78645968651348,
+            "knee_l": 87.68749978947372,
+            "hip_r": 61.10378002918889,
+            "hip_l": 88.16381408179194,
+            "right_hand_up": true,
+            "left_hand_up": false,
+            "right_wrist": [
+              1255.149169921875,
+              1076.7393798828125
+            ],
+            "left_wrist": [
+              420.33416748046875,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 17,
+      "timestamp_utc": "2025-09-27T21:00:59.800339+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            305.70538330078125,
+            411.2159118652344,
+            1576.749755859375,
+            1075.599365234375
+          ],
+          "base_state": "sitting_or_squatting",
           "events": [
             "raising_hand",
             "exiting_room"
@@ -525,21 +819,193 @@
             "base_state": 0.85
           },
           "features": {
-            "center_x": 825.2617797851562,
+            "center_x": 926.1949462890625,
             "center_y": 1080.0,
-            "knee_r": 112.84335238862785,
-            "knee_l": 25.187838854761914,
-            "hip_r": 129.16616120956257,
-            "hip_l": 152.7731781713789,
+            "knee_r": 56.957385563152826,
+            "knee_l": 93.5000622322632,
+            "hip_r": 62.86944806452078,
+            "hip_l": 87.47319349149012,
             "right_hand_up": true,
-            "left_hand_up": true,
+            "left_hand_up": false,
             "right_wrist": [
-              1144.6619873046875,
-              988.8682861328125
+              1243.426025390625,
+              1077.08642578125
             ],
             "left_wrist": [
-              328.8117370605469,
-              963.0780029296875
+              441.9118957519531,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 18,
+      "timestamp_utc": "2025-09-27T21:00:59.867429+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            297.34368896484375,
+            411.87554931640625,
+            1574.0933837890625,
+            1077.695068359375
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 938.744140625,
+            "center_y": 1080.0,
+            "knee_r": 58.57401225312334,
+            "knee_l": 90.90182589266948,
+            "hip_r": 64.96296660315524,
+            "hip_l": 86.02739261871606,
+            "right_hand_up": true,
+            "left_hand_up": false,
+            "right_wrist": [
+              1230.896728515625,
+              1076.1807861328125
+            ],
+            "left_wrist": [
+              465.1422119140625,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 19,
+      "timestamp_utc": "2025-09-27T21:00:59.933293+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            290.22869873046875,
+            412.27496337890625,
+            1579.4937744140625,
+            1078.0228271484375
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 936.235595703125,
+            "center_y": 1080.0,
+            "knee_r": 58.36077234750706,
+            "knee_l": 91.7577293741707,
+            "hip_r": 64.05112684246639,
+            "hip_l": 86.63763311580969,
+            "right_hand_up": true,
+            "left_hand_up": false,
+            "right_wrist": [
+              1224.2823486328125,
+              1074.8702392578125
+            ],
+            "left_wrist": [
+              445.9479675292969,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 20,
+      "timestamp_utc": "2025-09-27T21:01:00.001229+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            296.6114501953125,
+            409.0130310058594,
+            1574.4656982421875,
+            1076.72900390625
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 933.0477905273438,
+            "center_y": 1080.0,
+            "knee_r": 54.27355557346028,
+            "knee_l": 91.06614229789844,
+            "hip_r": 62.101880525512904,
+            "hip_l": 87.17051082564204,
+            "right_hand_up": true,
+            "left_hand_up": false,
+            "right_wrist": [
+              1241.017822265625,
+              1075.787109375
+            ],
+            "left_wrist": [
+              446.053466796875,
+              1080.0
+            ],
+            "right_shoulder_y": 1080.0,
+            "left_shoulder_y": 1080.0
+          }
+        }
+      ]
+    },
+    {
+      "frame_id": 21,
+      "timestamp_utc": "2025-09-27T21:01:00.067545+00:00",
+      "detections": [
+        {
+          "id": 1,
+          "bbox": [
+            330.6181640625,
+            419.4348449707031,
+            1608.8375244140625,
+            1080.0
+          ],
+          "base_state": "sitting_or_squatting",
+          "events": [
+            "raising_hand"
+          ],
+          "confidence": {
+            "raising_hand": 0.9,
+            "base_state": 0.85
+          },
+          "features": {
+            "center_x": 943.3259887695312,
+            "center_y": 1080.0,
+            "knee_r": 35.731925486283345,
+            "knee_l": 100.08489251395874,
+            "hip_r": 45.45913861619157,
+            "hip_l": 105.59870721458967,
+            "right_hand_up": false,
+            "left_hand_up": true,
+            "right_wrist": [
+              1196.6937255859375,
+              1080.0
+            ],
+            "left_wrist": [
+              480.84063720703125,
+              1077.3880615234375
             ],
             "right_shoulder_y": 1080.0,
             "left_shoulder_y": 1080.0
@@ -549,5066 +1015,43 @@
     },
     {
       "frame_id": 22,
-      "timestamp_utc": "2025-09-27T18:12:04.724878+00:00",
+      "timestamp_utc": "2025-09-27T21:01:00.134016+00:00",
       "detections": [
         {
           "id": 1,
           "bbox": [
-            32.3759765625,
-            423.1006164550781,
-            1598.3250732421875,
-            1075.5487060546875
+            351.66888427734375,
+            424.35369873046875,
+            1582.7176513671875,
+            1079.810791015625
           ],
-          "base_state": "walking_or_moving",
+          "base_state": "sitting_or_squatting",
           "events": [
-            "raising_hand",
-            "exiting_room"
+            "raising_hand"
           ],
           "confidence": {
             "raising_hand": 0.9,
-            "exiting_room": 1.0,
             "base_state": 0.85
           },
           "features": {
-            "center_x": 794.896240234375,
+            "center_x": 965.3491821289062,
             "center_y": 1080.0,
-            "knee_r": 139.89393524759672,
-            "knee_l": 16.556088725264114,
-            "hip_r": 134.58364091474033,
-            "hip_l": 160.1342636319774,
+            "knee_r": 30.673660930797897,
+            "knee_l": 107.24032428872336,
+            "hip_r": 41.577789717107585,
+            "hip_l": 114.92521409347071,
             "right_hand_up": true,
             "left_hand_up": true,
             "right_wrist": [
-              1073.00146484375,
-              968.1399536132812
+              1291.6993408203125,
+              1069.4384765625
             ],
             "left_wrist": [
-              300.3182678222656,
-              995.6640014648438
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 23,
-      "timestamp_utc": "2025-09-27T18:12:04.785873+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            207.50445556640625,
-            418.9140930175781,
-            1512.979248046875,
-            1069.4395751953125
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 925.4183959960938,
-            "center_y": 1080.0,
-            "knee_r": 99.38581182873571,
-            "knee_l": 17.79682958356461,
-            "hip_r": 110.8124817471523,
-            "hip_l": 32.746632965889184,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              908.3994750976562,
-              1039.9105224609375
-            ],
-            "left_wrist": [
-              605.8953247070312,
-              958.4546508789062
+              640.96826171875,
+              1061.5723876953125
             ],
             "right_shoulder_y": 1080.0,
             "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 5,
-          "bbox": [
-            0.0,
-            14.256134033203125,
-            162.27301025390625,
-            995.0553588867188
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "exiting_room"
-          ],
-          "confidence": {
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 20.205846786499023,
-            "center_y": 229.73233032226562,
-            "knee_r": 14.65779507372732,
-            "knee_l": 11.46911657067239,
-            "hip_r": 20.331031075467525,
-            "hip_l": 12.064529739512333,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              83.61815643310547,
-              556.1898193359375
-            ],
-            "left_wrist": [
-              81.02999114990234,
-              559.0496215820312
-            ],
-            "right_shoulder_y": 112.48640441894531,
-            "left_shoulder_y": 93.1493911743164
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 24,
-      "timestamp_utc": "2025-09-27T18:12:04.850760+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            14.111251831054688,
-            383.10791015625,
-            1539.3145751953125,
-            1068.55322265625
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 807.4041137695312,
-            "center_y": 1080.0,
-            "knee_r": 136.7978908906245,
-            "knee_l": 22.871927658071794,
-            "hip_r": 110.03287872525186,
-            "hip_l": 34.81882096272299,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              977.2300415039062,
-              1012.8088989257812
-            ],
-            "left_wrist": [
-              316.0582580566406,
-              993.8706665039062
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 25,
-      "timestamp_utc": "2025-09-27T18:12:04.922530+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            25.115478515625,
-            336.0176696777344,
-            1538.3931884765625,
-            1068.437744140625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 817.5592651367188,
-            "center_y": 1080.0,
-            "knee_r": 87.89486244445197,
-            "knee_l": 26.93092974838091,
-            "hip_r": 118.26417818711208,
-            "hip_l": 32.89084655011647,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              870.6461791992188,
-              1020.6400146484375
-            ],
-            "left_wrist": [
-              458.08575439453125,
-              995.51171875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 5,
-          "bbox": [
-            0.0,
-            10.727691650390625,
-            203.54617309570312,
-            1051.3155517578125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 58.03900146484375,
-            "center_y": 230.92950439453125,
-            "knee_r": 158.3292804807192,
-            "knee_l": 163.5559622258263,
-            "hip_r": 172.08311011123902,
-            "hip_l": 174.39848209364,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              131.76686096191406,
-              557.0398559570312
-            ],
-            "left_wrist": [
-              133.7464141845703,
-              562.90380859375
-            ],
-            "right_shoulder_y": 47.05494689941406,
-            "left_shoulder_y": 32.299713134765625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 26,
-      "timestamp_utc": "2025-09-27T18:12:04.988902+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            475.9541015625,
-            307.9661865234375,
-            1653.961669921875,
-            1068.878662109375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1085.0037841796875,
-            "center_y": 1056.6673583984375,
-            "knee_r": 160.8584691897807,
-            "knee_l": 29.226189579609866,
-            "hip_r": 0.5959177866658913,
-            "hip_l": 21.91741839716003,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              916.7574462890625,
-              1020.3189697265625
-            ],
-            "left_wrist": [
-              752.9620971679688,
-              1037.3323974609375
-            ],
-            "right_shoulder_y": 1024.99267578125,
-            "left_shoulder_y": 1041.6767578125
-          }
-        },
-        {
-          "id": 5,
-          "bbox": [
-            0.0,
-            3.769500732421875,
-            249.5782012939453,
-            832.8261108398438
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 59.39545440673828,
-            "center_y": 315.06817626953125,
-            "knee_r": 141.91594299283008,
-            "knee_l": 167.61471046409628,
-            "hip_r": 171.64698038401855,
-            "hip_l": 173.4590144434319,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              141.7139434814453,
-              584.6257934570312
-            ],
-            "left_wrist": [
-              85.98274993896484,
-              603.080322265625
-            ],
-            "right_shoulder_y": 49.692970275878906,
-            "left_shoulder_y": 23.208457946777344
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 27,
-      "timestamp_utc": "2025-09-27T18:12:05.052472+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            19.527557373046875,
-            250.43701171875,
-            1478.6025390625,
-            1072.4315185546875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 682.7608032226562,
-            "center_y": 1063.434814453125,
-            "knee_r": 134.75218986678226,
-            "knee_l": 30.193544328621066,
-            "hip_r": 148.57593731128776,
-            "hip_l": 109.56902967586595,
-            "right_hand_up": false,
-            "left_hand_up": true,
-            "right_wrist": [
-              957.7115478515625,
-              1080.0
-            ],
-            "left_wrist": [
-              272.54766845703125,
-              941.8995361328125
-            ],
-            "right_shoulder_y": 1076.98388671875,
-            "left_shoulder_y": 1016.7552490234375
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 28,
-      "timestamp_utc": "2025-09-27T18:12:05.120976+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            2.16448974609375,
-            91.21087646484375,
-            1761.8076171875,
-            1068.329345703125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 780.240478515625,
-            "center_y": 1006.256591796875,
-            "knee_r": 113.96183317931967,
-            "knee_l": 58.29506472042375,
-            "hip_r": 140.05608517367986,
-            "hip_l": 56.939545537647305,
-            "right_hand_up": true,
-            "left_hand_up": false,
-            "right_wrist": [
-              1211.4312744140625,
-              938.0403442382812
-            ],
-            "left_wrist": [
-              230.9813690185547,
-              910.1861572265625
-            ],
-            "right_shoulder_y": 976.11865234375,
-            "left_shoulder_y": 888.9076538085938
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 29,
-      "timestamp_utc": "2025-09-27T18:12:05.184240+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            4.0404052734375,
-            5.587005615234375,
-            1460.702392578125,
-            1063.7669677734375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 639.23974609375,
-            "center_y": 877.7962646484375,
-            "knee_r": 110.91105531955154,
-            "knee_l": 64.17752947849675,
-            "hip_r": 146.68876617139378,
-            "hip_l": 96.39928287864446,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              930.5711059570312,
-              935.8361206054688
-            ],
-            "left_wrist": [
-              179.00157165527344,
-              811.0426635742188
-            ],
-            "right_shoulder_y": 920.8430786132812,
-            "left_shoulder_y": 687.9688110351562
-          }
-        },
-        {
-          "id": 3,
-          "bbox": [
-            481.553955078125,
-            5.870269775390625,
-            1920.0,
-            1063.5640869140625
-          ],
-          "base_state": "bending",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 1235.058349609375,
-            "center_y": 876.073486328125,
-            "knee_r": 174.1594966761176,
-            "knee_l": 50.42060144361577,
-            "hip_r": 41.507006763669956,
-            "hip_l": 16.55114214593876,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1152.3087158203125,
-              849.3675537109375
-            ],
-            "left_wrist": [
-              698.00830078125,
-              821.1583251953125
-            ],
-            "right_shoulder_y": 781.2327270507812,
-            "left_shoulder_y": 777.3094482421875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 30,
-      "timestamp_utc": "2025-09-27T18:12:05.249903+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            681.1386108398438,
-            6.18804931640625,
-            1902.8057861328125,
-            1065.505615234375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1330.5087890625,
-            "center_y": 885.7738647460938,
-            "knee_r": 173.59179962200224,
-            "knee_l": 35.99209463150713,
-            "hip_r": 57.39702084614295,
-            "hip_l": 8.393046232972853,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1198.4034423828125,
-              936.7227172851562
-            ],
-            "left_wrist": [
-              842.2984008789062,
-              833.1871948242188
-            ],
-            "right_shoulder_y": 657.705322265625,
-            "left_shoulder_y": 725.39013671875
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            4.746551513671875,
-            4.133331298828125,
-            1393.4625244140625,
-            1067.255615234375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 621.7630004882812,
-            "center_y": 876.2702026367188,
-            "knee_r": 106.48025733863035,
-            "knee_l": 175.77620334321776,
-            "hip_r": 143.85774436573215,
-            "hip_l": 38.74109189088434,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              891.422607421875,
-              946.2779541015625
-            ],
-            "left_wrist": [
-              239.3558349609375,
-              814.0001831054688
-            ],
-            "right_shoulder_y": 861.81591796875,
-            "left_shoulder_y": 637.4019165039062
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 31,
-      "timestamp_utc": "2025-09-27T18:12:05.330576+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            622.6907958984375,
-            4.837921142578125,
-            1902.3021240234375,
-            1063.4495849609375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1248.633544921875,
-            "center_y": 893.5650024414062,
-            "knee_r": 177.96117770444926,
-            "knee_l": 37.24809580676788,
-            "hip_r": 70.0140622355712,
-            "hip_l": 10.560762437501197,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1204.85693359375,
-              889.3672485351562
-            ],
-            "left_wrist": [
-              753.6239013671875,
-              818.5178833007812
-            ],
-            "right_shoulder_y": 689.0157470703125,
-            "left_shoulder_y": 725.2442016601562
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            10.013031005859375,
-            1377.8614501953125,
-            1070.549072265625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 559.7987670898438,
-            "center_y": 826.9201049804688,
-            "knee_r": 108.06875203448587,
-            "knee_l": 126.26806312359771,
-            "hip_r": 142.94359996560812,
-            "hip_l": 29.577907361398807,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              815.4935913085938,
-              932.4141235351562
-            ],
-            "left_wrist": [
-              133.96385192871094,
-              773.6153564453125
-            ],
-            "right_shoulder_y": 860.6044921875,
-            "left_shoulder_y": 599.2286376953125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 32,
-      "timestamp_utc": "2025-09-27T18:12:05.417868+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            18.541259765625,
-            1415.2503662109375,
-            1067.9635009765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 577.0989379882812,
-            "center_y": 817.1264038085938,
-            "knee_r": 120.17517375624352,
-            "knee_l": 96.4067810362884,
-            "hip_r": 142.4949037928433,
-            "hip_l": 62.87519899132783,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              819.8060913085938,
-              924.9204711914062
-            ],
-            "left_wrist": [
-              51.82379150390625,
-              689.3165893554688
-            ],
-            "right_shoulder_y": 851.7378540039062,
-            "left_shoulder_y": 598.7491455078125
-          }
-        },
-        {
-          "id": 3,
-          "bbox": [
-            647.7973022460938,
-            5.612274169921875,
-            1894.7054443359375,
-            1064.248291015625
-          ],
-          "base_state": "bending",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 1324.391845703125,
-            "center_y": 870.6611938476562,
-            "knee_r": 172.38855610675463,
-            "knee_l": 50.67176492433538,
-            "hip_r": 51.04815654446737,
-            "hip_l": 1.334703563621103,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1283.802490234375,
-              1005.6002807617188
-            ],
-            "left_wrist": [
-              781.00048828125,
-              810.8096923828125
-            ],
-            "right_shoulder_y": 661.1690673828125,
-            "left_shoulder_y": 692.1319580078125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 33,
-      "timestamp_utc": "2025-09-27T18:12:05.483353+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            706.1337890625,
-            5.193695068359375,
-            1897.9454345703125,
-            1066.4693603515625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1332.1099853515625,
-            "center_y": 895.98193359375,
-            "knee_r": 170.06560694470556,
-            "knee_l": 41.06879080580021,
-            "hip_r": 56.84636991632996,
-            "hip_l": 10.313203727772194,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1294.5186767578125,
-              1027.84716796875
-            ],
-            "left_wrist": [
-              801.8084106445312,
-              843.2755737304688
-            ],
-            "right_shoulder_y": 700.9573974609375,
-            "left_shoulder_y": 722.9702758789062
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            8.721221923828125,
-            1428.019287109375,
-            1068.541015625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 641.0902099609375,
-            "center_y": 875.2706298828125,
-            "knee_r": 127.71434219343911,
-            "knee_l": 78.14901767176971,
-            "hip_r": 137.9034004935168,
-            "hip_l": 78.84136862406827,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              683.0726318359375,
-              895.7430419921875
-            ],
-            "left_wrist": [
-              107.23123168945312,
-              739.5440063476562
-            ],
-            "right_shoulder_y": 874.7184448242188,
-            "left_shoulder_y": 667.4486694335938
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 34,
-      "timestamp_utc": "2025-09-27T18:12:05.548423+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            751.9537353515625,
-            2.703277587890625,
-            1891.612060546875,
-            1066.2886962890625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 1367.2406005859375,
-            "center_y": 903.7459716796875,
-            "knee_r": 172.75370047447834,
-            "knee_l": 47.30883745674419,
-            "hip_r": 44.81510101223486,
-            "hip_l": 1.5367861927736006,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1279.6455078125,
-              1033.34033203125
-            ],
-            "left_wrist": [
-              829.319091796875,
-              849.0302124023438
-            ],
-            "right_shoulder_y": 723.4317016601562,
-            "left_shoulder_y": 731.5521850585938
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            5.688720703125,
-            1483.8292236328125,
-            1064.5693359375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 687.0465087890625,
-            "center_y": 855.7340087890625,
-            "knee_r": 121.19271569802582,
-            "knee_l": 40.546075966290054,
-            "hip_r": 149.1676915449932,
-            "hip_l": 122.2627624277857,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              774.9171752929688,
-              873.6024169921875
-            ],
-            "left_wrist": [
-              90.91474914550781,
-              684.3880615234375
-            ],
-            "right_shoulder_y": 863.244873046875,
-            "left_shoulder_y": 669.7933959960938
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 35,
-      "timestamp_utc": "2025-09-27T18:12:05.616044+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            722.2846069335938,
-            3.7510986328125,
-            1900.469970703125,
-            1069.5115966796875
-          ],
-          "base_state": "bending",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 1386.814697265625,
-            "center_y": 904.5203857421875,
-            "knee_r": 172.42125397469314,
-            "knee_l": 49.12135510787208,
-            "hip_r": 40.31258878932924,
-            "hip_l": 10.837844109565452,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1387.9390869140625,
-              1039.1435546875
-            ],
-            "left_wrist": [
-              797.9877319335938,
-              861.638916015625
-            ],
-            "right_shoulder_y": 734.3706665039062,
-            "left_shoulder_y": 771.600830078125
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            2.759857177734375,
-            9.965423583984375,
-            1491.8726806640625,
-            1064.81982421875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 695.8954467773438,
-            "center_y": 887.56640625,
-            "knee_r": 110.98035973071491,
-            "knee_l": 74.47212865780192,
-            "hip_r": 137.28212056632762,
-            "hip_l": 77.61546213895106,
-            "right_hand_up": true,
-            "left_hand_up": false,
-            "right_wrist": [
-              655.6853637695312,
-              905.9130249023438
-            ],
-            "left_wrist": [
-              300.3779602050781,
-              806.2381591796875
-            ],
-            "right_shoulder_y": 907.6743774414062,
-            "left_shoulder_y": 693.3272094726562
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 36,
-      "timestamp_utc": "2025-09-27T18:12:05.682541+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            699.270263671875,
-            14.329742431640625,
-            1894.9219970703125,
-            1064.4908447265625
-          ],
-          "base_state": "bending",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1320.148193359375,
-            "center_y": 956.9872436523438,
-            "knee_r": 160.70289900192685,
-            "knee_l": 28.95359877455208,
-            "hip_r": 53.12596839831493,
-            "hip_l": 8.368639343132937,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1388.369384765625,
-              1035.5928955078125
-            ],
-            "left_wrist": [
-              786.2444458007812,
-              944.4710083007812
-            ],
-            "right_shoulder_y": 821.6881713867188,
-            "left_shoulder_y": 846.2607421875
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            0.76025390625,
-            17.561370849609375,
-            1496.35595703125,
-            1067.6524658203125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 770.375,
-            "center_y": 966.5580444335938,
-            "knee_r": 106.59744336061028,
-            "knee_l": 26.947682136686673,
-            "hip_r": 142.8710294809562,
-            "hip_l": 123.36407464559501,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              413.9607238769531,
-              888.2820434570312
-            ],
-            "left_wrist": [
-              36.301666259765625,
-              762.0126342773438
-            ],
-            "right_shoulder_y": 953.7843017578125,
-            "left_shoulder_y": 808.6708374023438
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 37,
-      "timestamp_utc": "2025-09-27T18:12:05.749861+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            705.8750610351562,
-            133.62753295898438,
-            1875.4718017578125,
-            1060.18994140625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1367.65673828125,
-            "center_y": 1004.742919921875,
-            "knee_r": 136.97337446866013,
-            "knee_l": 30.510100653883818,
-            "hip_r": 10.529989989590588,
-            "hip_l": 8.946994925625427,
-            "right_hand_up": false,
-            "left_hand_up": true,
-            "right_wrist": [
-              1156.696533203125,
-              962.611328125
-            ],
-            "left_wrist": [
-              875.3994140625,
-              930.0992431640625
-            ],
-            "right_shoulder_y": 928.53515625,
-            "left_shoulder_y": 930.4364013671875
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            96.900146484375,
-            1858.1978759765625,
-            1071.7532958984375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 943.0011596679688,
-            "center_y": 1003.7409057617188,
-            "knee_r": 99.7562080163176,
-            "knee_l": 26.333189438920105,
-            "hip_r": 128.12854500033873,
-            "hip_l": 96.01775847842687,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1196.72802734375,
-              903.609375
-            ],
-            "left_wrist": [
-              99.75018310546875,
-              845.4269409179688
-            ],
-            "right_shoulder_y": 947.029541015625,
-            "left_shoulder_y": 907.9340209960938
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 38,
-      "timestamp_utc": "2025-09-27T18:12:05.817995+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            710.8126831054688,
-            220.18359375,
-            1888.294189453125,
-            1070.65625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1389.3558349609375,
-            "center_y": 1040.49951171875,
-            "knee_r": 137.2777222034507,
-            "knee_l": 29.623795768414347,
-            "hip_r": 3.8247551252184446,
-            "hip_l": 12.417016924118341,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1081.8306884765625,
-              996.932373046875
-            ],
-            "left_wrist": [
-              935.7623901367188,
-              939.8040161132812
-            ],
-            "right_shoulder_y": 1010.4688110351562,
-            "left_shoulder_y": 991.5294799804688
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            3.2947998046875,
-            177.81134033203125,
-            1637.3192138671875,
-            1068.5860595703125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 893.7513427734375,
-            "center_y": 1051.8739013671875,
-            "knee_r": 164.59646324506744,
-            "knee_l": 9.859952968324835,
-            "hip_r": 138.4130142060154,
-            "hip_l": 133.4090435376725,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              58.22639465332031,
-              778.5798950195312
-            ],
-            "left_wrist": [
-              68.54177856445312,
-              799.0383911132812
-            ],
-            "right_shoulder_y": 1075.5645751953125,
-            "left_shoulder_y": 992.4613037109375
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 39,
-      "timestamp_utc": "2025-09-27T18:12:05.885128+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            6.5299072265625,
-            257.0644226074219,
-            1801.5732421875,
-            1065.3448486328125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 936.597412109375,
-            "center_y": 1057.74462890625,
-            "knee_r": 160.04028936386027,
-            "knee_l": 19.84737925181951,
-            "hip_r": 130.67138135281303,
-            "hip_l": 91.14968994869554,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1003.7404174804688,
-              1035.303466796875
-            ],
-            "left_wrist": [
-              151.93954467773438,
-              811.8446044921875
-            ],
-            "right_shoulder_y": 1079.755126953125,
-            "left_shoulder_y": 991.2236938476562
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 40,
-      "timestamp_utc": "2025-09-27T18:12:05.956037+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            17.1712646484375,
-            254.5733642578125,
-            1850.9886474609375,
-            1066.3924560546875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 970.93603515625,
-            "center_y": 1057.4754638671875,
-            "knee_r": 159.53926173922278,
-            "knee_l": 14.339541006914983,
-            "hip_r": 131.64366864309366,
-            "hip_l": 106.3378126216082,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              448.1811218261719,
-              845.4669799804688
-            ],
-            "left_wrist": [
-              263.8588562011719,
-              720.6650390625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 989.9019165039062
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 41,
-      "timestamp_utc": "2025-09-27T18:12:06.027745+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            260.8795166015625,
-            185.44921875,
-            1902.16259765625,
-            1061.3646240234375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1119.397216796875,
-            "center_y": 1055.6856689453125,
-            "knee_r": 176.04976481899405,
-            "knee_l": 30.505279857485544,
-            "hip_r": 133.96037838824756,
-            "hip_l": 30.17889975455706,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              851.8753051757812,
-              661.5455932617188
-            ],
-            "left_wrist": [
-              468.5417175292969,
-              337.2894592285156
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 982.7427978515625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 42,
-      "timestamp_utc": "2025-09-27T18:12:06.121974+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            442.22607421875,
-            20.980133056640625,
-            1877.768310546875,
-            1069.7030029296875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1096.96435546875,
-            "center_y": 1049.58447265625,
-            "knee_r": 120.37926208829619,
-            "knee_l": 32.29721416502911,
-            "hip_r": 136.5395436817232,
-            "hip_l": 91.25633687699676,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              805.6294555664062,
-              325.6304931640625
-            ],
-            "left_wrist": [
-              637.5501708984375,
-              192.9814910888672
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 958.3377685546875
-          }
-        },
-        {
-          "id": 5,
-          "bbox": [
-            1.0199432373046875,
-            2.4986572265625,
-            644.0022583007812,
-            857.505615234375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 246.78976440429688,
-            "center_y": 122.70429992675781,
-            "knee_r": 117.63259446476452,
-            "knee_l": 119.82278491049965,
-            "hip_r": 109.32380797454994,
-            "hip_l": 123.28321440946627,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              588.5182495117188,
-              140.63919067382812
-            ],
-            "left_wrist": [
-              198.2141571044922,
-              576.9160766601562
-            ],
-            "right_shoulder_y": 21.180152893066406,
-            "left_shoulder_y": 29.386001586914062
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 43,
-      "timestamp_utc": "2025-09-27T18:12:06.187677+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            506.68524169921875,
-            29.494720458984375,
-            1893.1197509765625,
-            1065.7862548828125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1172.7113037109375,
-            "center_y": 1051.2584228515625,
-            "knee_r": 114.42126510345052,
-            "knee_l": 25.352401333567485,
-            "hip_r": 141.33769919835746,
-            "hip_l": 89.62880448450399,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1273.6007080078125,
-              763.7576293945312
-            ],
-            "left_wrist": [
-              715.2691040039062,
-              229.8029022216797
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 965.0335693359375
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 44,
-      "timestamp_utc": "2025-09-27T18:12:06.253485+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            654.6264038085938,
-            357.844482421875,
-            1916.5147705078125,
-            1071.8492431640625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1317.48193359375,
-            "center_y": 1067.77294921875,
-            "knee_r": 176.39806858061309,
-            "knee_l": 11.702708485760692,
-            "hip_r": 139.33263900364366,
-            "hip_l": 12.470785791418777,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1317.7557373046875,
-              1064.5413818359375
-            ],
-            "left_wrist": [
-              859.968017578125,
-              667.2559204101562
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1031.0916748046875
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            509.984619140625,
-            12.00970458984375,
-            1873.238525390625,
-            1066.02734375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1103.7293701171875,
-            "center_y": 1051.0496826171875,
-            "knee_r": 106.09350954926376,
-            "knee_l": 26.531070917848766,
-            "hip_r": 151.2192677650622,
-            "hip_l": 126.4627783012115,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1362.8643798828125,
-              922.0736083984375
-            ],
-            "left_wrist": [
-              835.15234375,
-              727.4189453125
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 989.96630859375
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 45,
-      "timestamp_utc": "2025-09-27T18:12:06.323040+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            1014.0699462890625,
-            387.69415283203125,
-            1919.3280029296875,
-            1067.8502197265625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1565.6142578125,
-            "center_y": 1079.69287109375,
-            "knee_r": 172.3492091993189,
-            "knee_l": 14.904567170302444,
-            "hip_r": 27.42428747491304,
-            "hip_l": 21.691304683863947,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1278.641357421875,
-              1047.7265625
-            ],
-            "left_wrist": [
-              1090.8818359375,
-              902.1456909179688
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1078.771484375
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            574.5650024414062,
-            333.95343017578125,
-            1879.5435791015625,
-            1076.4149169921875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1191.348876953125,
-            "center_y": 1068.6163330078125,
-            "knee_r": 155.52117460794423,
-            "knee_l": 24.818805659764138,
-            "hip_r": 139.6702685401094,
-            "hip_l": 123.55955222699704,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1402.4852294921875,
-              968.6165771484375
-            ],
-            "left_wrist": [
-              814.973876953125,
-              982.4423828125
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1044.855224609375
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 46,
-      "timestamp_utc": "2025-09-27T18:12:06.385700+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            1024.8275146484375,
-            417.921875,
-            1920.0,
-            1069.97509765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1547.1580810546875,
-            "center_y": 1078.038330078125,
-            "knee_r": 54.32549998876756,
-            "knee_l": 14.872826637000358,
-            "hip_r": 47.29493756258244,
-            "hip_l": 30.188844866947086,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1352.90673828125,
-              1066.562744140625
-            ],
-            "left_wrist": [
-              1064.2862548828125,
-              428.7984924316406
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            590.7633666992188,
-            0.0,
-            1892.357666015625,
-            1078.31201171875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1169.6002197265625,
-            "center_y": 1072.2763671875,
-            "knee_r": 134.4401902210245,
-            "knee_l": 51.396170968725436,
-            "hip_r": 129.56577450695545,
-            "hip_l": 130.60097594657796,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1191.4002685546875,
-              112.68452453613281
-            ],
-            "left_wrist": [
-              975.3084106445312,
-              45.49900817871094
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1049.105224609375
-          }
-        },
-        {
-          "id": 6,
-          "bbox": [
-            905.82568359375,
-            73.0491943359375,
-            1905.7779541015625,
-            1076.07275390625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1381.42041015625,
-            "center_y": 1080.0,
-            "knee_r": 113.57290225889847,
-            "knee_l": 21.442995372684862,
-            "hip_r": 119.64860115723718,
-            "hip_l": 31.60502357702933,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1374.359619140625,
-              948.1431884765625
-            ],
-            "left_wrist": [
-              987.64599609375,
-              130.8545379638672
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 47,
-      "timestamp_utc": "2025-09-27T18:12:06.453189+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            1029.7540283203125,
-            387.50592041015625,
-            1919.7861328125,
-            1065.89404296875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1567.5167236328125,
-            "center_y": 1077.6982421875,
-            "knee_r": 122.32747553710885,
-            "knee_l": 16.30767179907176,
-            "hip_r": 48.009935209763945,
-            "hip_l": 27.323662689245207,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1350.21044921875,
-              1060.408447265625
-            ],
-            "left_wrist": [
-              1134.433349609375,
-              544.6561279296875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1070.7930908203125
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            581.2186889648438,
-            0.0,
-            1894.5428466796875,
-            1062.28271484375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1143.7568359375,
-            "center_y": 1069.8795166015625,
-            "knee_r": 140.82414809362143,
-            "knee_l": 43.537367627514215,
-            "hip_r": 150.11444874810186,
-            "hip_l": 131.98525829209004,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1283.811279296875,
-              176.47984313964844
-            ],
-            "left_wrist": [
-              1011.7869873046875,
-              55.77012634277344
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1039.51806640625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 48,
-      "timestamp_utc": "2025-09-27T18:12:06.522143+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            610.2398071289062,
-            30.15765380859375,
-            1912.484375,
-            1073.6441650390625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1243.1512451171875,
-            "center_y": 1078.60986328125,
-            "knee_r": 143.8321302768183,
-            "knee_l": 25.45530686489787,
-            "hip_r": 132.72726844997115,
-            "hip_l": 138.82005143854042,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1422.45068359375,
-              956.6779174804688
-            ],
-            "left_wrist": [
-              1000.0466918945312,
-              307.3935241699219
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1074.439208984375
-          }
-        },
-        {
-          "id": 3,
-          "bbox": [
-            1043.021240234375,
-            395.76690673828125,
-            1920.0,
-            1067.34130859375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1570.421630859375,
-            "center_y": 1078.2186279296875,
-            "knee_r": 174.3596439817102,
-            "knee_l": 14.529879510752467,
-            "hip_r": 35.37485467331348,
-            "hip_l": 20.89085966135775,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1353.5916748046875,
-              1051.5792236328125
-            ],
-            "left_wrist": [
-              1129.767578125,
-              769.4485473632812
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1072.8743896484375
-          }
-        },
-        {
-          "id": 6,
-          "bbox": [
-            595.3928833007812,
-            378.8354187011719,
-            1912.7315673828125,
-            1074.7513427734375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1306.358154296875,
-            "center_y": 1080.0,
-            "knee_r": 154.35676070567567,
-            "knee_l": 9.326890311141657,
-            "hip_r": 149.28462679807316,
-            "hip_l": 12.703192238521986,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1397.89794921875,
-              1025.57958984375
-            ],
-            "left_wrist": [
-              855.3854370117188,
-              958.2706298828125
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 49,
-      "timestamp_utc": "2025-09-27T18:12:06.614406+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            853.2394409179688,
-            0.0,
-            1899.894775390625,
-            1076.7279052734375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1340.9794921875,
-            "center_y": 1080.0,
-            "knee_r": 118.22049770209387,
-            "knee_l": 38.91439546183693,
-            "hip_r": 121.78727643041141,
-            "hip_l": 33.34430278127032,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1376.004150390625,
-              618.2842407226562
-            ],
-            "left_wrist": [
-              1032.822998046875,
-              92.51248168945312
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 3,
-          "bbox": [
-            825.7673950195312,
-            408.28436279296875,
-            1904.137939453125,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1467.386474609375,
-            "center_y": 1080.0,
-            "knee_r": 149.45617000963728,
-            "knee_l": 14.830515940628116,
-            "hip_r": 147.0693804826012,
-            "hip_l": 12.53854518410641,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1412.8238525390625,
-              988.336669921875
-            ],
-            "left_wrist": [
-              1047.505126953125,
-              249.10015869140625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 50,
-      "timestamp_utc": "2025-09-27T18:12:06.683945+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            992.2489013671875,
-            447.3977966308594,
-            1919.7366943359375,
-            1072.7188720703125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1584.056884765625,
-            "center_y": 1080.0,
-            "knee_r": 166.3044102127178,
-            "knee_l": 10.889239916815267,
-            "hip_r": 28.506250975160928,
-            "hip_l": 20.258406143017794,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1321.23193359375,
-              1024.1033935546875
-            ],
-            "left_wrist": [
-              1064.7261962890625,
-              502.0979919433594
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            847.508056640625,
-            1.680633544921875,
-            1900.5992431640625,
-            1078.8453369140625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1343.07470703125,
-            "center_y": 1080.0,
-            "knee_r": 125.3195364626153,
-            "knee_l": 38.36453321181746,
-            "hip_r": 120.8023822764824,
-            "hip_l": 32.452228807841564,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1337.407470703125,
-              625.7755126953125
-            ],
-            "left_wrist": [
-              996.0328369140625,
-              101.98594665527344
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 51,
-      "timestamp_utc": "2025-09-27T18:12:06.749854+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            1006.1422119140625,
-            435.639892578125,
-            1919.44482421875,
-            1070.9697265625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1591.0609130859375,
-            "center_y": 1080.0,
-            "knee_r": 176.844197018026,
-            "knee_l": 14.604339658869234,
-            "hip_r": 27.70632759870516,
-            "hip_l": 22.06736859802213,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1331.09912109375,
-              1036.2059326171875
-            ],
-            "left_wrist": [
-              1118.151123046875,
-              589.0850219726562
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            936.949951171875,
-            182.54315185546875,
-            1906.626708984375,
-            1079.377685546875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1420.990478515625,
-            "center_y": 1080.0,
-            "knee_r": 119.214466793044,
-            "knee_l": 16.162458220345894,
-            "hip_r": 121.26253443158438,
-            "hip_l": 27.64129865225583,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1376.97314453125,
-              998.3258056640625
-            ],
-            "left_wrist": [
-              1005.9879150390625,
-              142.482421875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 52,
-      "timestamp_utc": "2025-09-27T18:12:06.813430+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            995.6275634765625,
-            438.42510986328125,
-            1920.0,
-            1075.9482421875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1576.0455322265625,
-            "center_y": 1080.0,
-            "knee_r": 78.23802843773997,
-            "knee_l": 16.84487139415331,
-            "hip_r": 49.37879126201832,
-            "hip_l": 28.487297516872168,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1365.562744140625,
-              1062.2109375
-            ],
-            "left_wrist": [
-              1089.1455078125,
-              456.38067626953125
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            916.675048828125,
-            125.16796875,
-            1894.654541015625,
-            1077.3651123046875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1327.0377197265625,
-            "center_y": 1080.0,
-            "knee_r": 124.0151999720445,
-            "knee_l": 34.97712840548317,
-            "hip_r": 117.36344376293324,
-            "hip_l": 33.885788695738654,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1380.138427734375,
-              780.736083984375
-            ],
-            "left_wrist": [
-              986.9361572265625,
-              115.89811706542969
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 53,
-      "timestamp_utc": "2025-09-27T18:12:06.874330+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            1004.5711669921875,
-            433.61297607421875,
-            1919.456298828125,
-            1071.6427001953125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1593.653076171875,
-            "center_y": 1080.0,
-            "knee_r": 174.57314230869795,
-            "knee_l": 14.388321639205268,
-            "hip_r": 31.168621849730417,
-            "hip_l": 23.0045694023507,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1339.197509765625,
-              1040.810302734375
-            ],
-            "left_wrist": [
-              1117.3946533203125,
-              587.0430908203125
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            927.0311279296875,
-            216.33718872070312,
-            1904.8798828125,
-            1079.78271484375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1406.023681640625,
-            "center_y": 1080.0,
-            "knee_r": 127.26226636199381,
-            "knee_l": 17.806050989120383,
-            "hip_r": 119.30652839562802,
-            "hip_l": 30.032470375457233,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1364.366943359375,
-              990.6251220703125
-            ],
-            "left_wrist": [
-              1007.9390869140625,
-              144.37518310546875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 6,
-          "bbox": [
-            580.9306640625,
-            0.0,
-            1875.7899169921875,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1167.61279296875,
-            "center_y": 1076.82666015625,
-            "knee_r": 151.27794944452356,
-            "knee_l": 55.318036496412525,
-            "hip_r": 128.6259492803897,
-            "hip_l": 137.93767427998063,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1198.0784912109375,
-              132.06427001953125
-            ],
-            "left_wrist": [
-              988.8729858398438,
-              66.02481079101562
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1067.3067626953125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 54,
-      "timestamp_utc": "2025-09-27T18:12:06.938891+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            1011.5388793945312,
-            425.2808532714844,
-            1919.51416015625,
-            1069.1275634765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1585.61328125,
-            "center_y": 1080.0,
-            "knee_r": 165.7646268479443,
-            "knee_l": 14.418988269066592,
-            "hip_r": 25.682541760658616,
-            "hip_l": 20.176609497748416,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1337.3984375,
-              1038.752197265625
-            ],
-            "left_wrist": [
-              1131.1552734375,
-              675.3445434570312
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            920.2247314453125,
-            153.8660888671875,
-            1901.489990234375,
-            1075.3001708984375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1349.7081298828125,
-            "center_y": 1078.768310546875,
-            "knee_r": 113.3515159589909,
-            "knee_l": 30.416818612983658,
-            "hip_r": 124.0969166351681,
-            "hip_l": 18.93033332767639,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1410.2431640625,
-              863.3373413085938
-            ],
-            "left_wrist": [
-              999.6414184570312,
-              136.5784149169922
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1075.0733642578125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 55,
-      "timestamp_utc": "2025-09-27T18:12:07.005642+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            829.40185546875,
-            0.0,
-            1868.0943603515625,
-            1074.588134765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1248.49951171875,
-            "center_y": 1066.261962890625,
-            "knee_r": 147.3064073732773,
-            "knee_l": 32.08358039185694,
-            "hip_r": 132.7471407344132,
-            "hip_l": 119.23965717262863,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1232.91650390625,
-              212.58773803710938
-            ],
-            "left_wrist": [
-              960.6514892578125,
-              64.61503601074219
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1025.047607421875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 56,
-      "timestamp_utc": "2025-09-27T18:12:07.080586+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            826.17333984375,
-            0.0,
-            1886.7835693359375,
-            1077.3360595703125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1244.103271484375,
-            "center_y": 1073.497802734375,
-            "knee_r": 114.23685806491562,
-            "knee_l": 38.232240988771885,
-            "hip_r": 135.52637802523407,
-            "hip_l": 136.233899874853,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1278.9080810546875,
-              296.4438781738281
-            ],
-            "left_wrist": [
-              950.478759765625,
-              218.4049530029297
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1053.991455078125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 57,
-      "timestamp_utc": "2025-09-27T18:12:07.154833+00:00",
-      "detections": [
-        {
-          "id": 3,
-          "bbox": [
-            750.1774291992188,
-            387.3300476074219,
-            1905.7833251953125,
-            1076.4422607421875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1375.958251953125,
-            "center_y": 1080.0,
-            "knee_r": 95.68931328954267,
-            "knee_l": 21.733219756393968,
-            "hip_r": 124.79556710453072,
-            "hip_l": 30.361429021377326,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1443.02197265625,
-              951.643310546875
-            ],
-            "left_wrist": [
-              894.9615478515625,
-              342.81695556640625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            689.6720581054688,
-            2.060302734375,
-            1896.5538330078125,
-            1069.4344482421875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1213.16796875,
-            "center_y": 1067.6815185546875,
-            "knee_r": 116.67381867119047,
-            "knee_l": 47.720855635805414,
-            "hip_r": 139.7071363404172,
-            "hip_l": 129.88591102040147,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1275.1866455078125,
-              329.27178955078125
-            ],
-            "left_wrist": [
-              934.911865234375,
-              230.86981201171875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1032.7169189453125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 58,
-      "timestamp_utc": "2025-09-27T18:12:07.219133+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            572.4215698242188,
-            368.7740478515625,
-            1890.06494140625,
-            1075.8720703125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1275.322021484375,
-            "center_y": 1080.0,
-            "knee_r": 131.98651121258288,
-            "knee_l": 3.9381668072779266,
-            "hip_r": 139.1301811430371,
-            "hip_l": 154.70579423593273,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              749.25537109375,
-              676.6401977539062
-            ],
-            "left_wrist": [
-              780.186279296875,
-              683.1655883789062
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 59,
-      "timestamp_utc": "2025-09-27T18:12:07.283061+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            410.73211669921875,
-            432.8621520996094,
-            1910.239013671875,
-            1076.5400390625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1327.54736328125,
-            "center_y": 1080.0,
-            "knee_r": 145.45853130927324,
-            "knee_l": 5.307371767006457,
-            "hip_r": 141.04638997370301,
-            "hip_l": 154.42649707245727,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              875.4825439453125,
-              899.259521484375
-            ],
-            "left_wrist": [
-              630.8390502929688,
-              850.348388671875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 60,
-      "timestamp_utc": "2025-09-27T18:12:07.350220+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            355.4769592285156,
-            415.85247802734375,
-            1868.756103515625,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1263.40234375,
-            "center_y": 1078.983154296875,
-            "knee_r": 158.09657727935155,
-            "knee_l": 12.661201948405992,
-            "hip_r": 137.8248843881681,
-            "hip_l": 151.13778842854157,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              564.81103515625,
-              969.6808471679688
-            ],
-            "left_wrist": [
-              605.9492797851562,
-              985.1549072265625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1075.9324951171875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 61,
-      "timestamp_utc": "2025-09-27T18:12:07.415508+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            235.982666015625,
-            399.81884765625,
-            1896.66259765625,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1190.3367919921875,
-            "center_y": 1073.88134765625,
-            "knee_r": 120.20087162187488,
-            "knee_l": 6.172434182838831,
-            "hip_r": 136.2388996456385,
-            "hip_l": 152.7092095313353,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              496.49078369140625,
-              1001.7901611328125
-            ],
-            "left_wrist": [
-              552.6072998046875,
-              1022.0230102539062
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1055.525146484375
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 62,
-      "timestamp_utc": "2025-09-27T18:12:07.489595+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            403.23956298828125,
-            407.1361389160156,
-            1916.4180908203125,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1271.159423828125,
-            "center_y": 1076.153076171875,
-            "knee_r": 101.73360347167085,
-            "knee_l": 0.997495784661045,
-            "hip_r": 136.28493307328768,
-            "hip_l": 153.84495755550392,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              669.4249877929688,
-              1021.8056640625
-            ],
-            "left_wrist": [
-              699.7509765625,
-              1012.202880859375
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1064.612060546875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 63,
-      "timestamp_utc": "2025-09-27T18:12:07.548054+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 64,
-      "timestamp_utc": "2025-09-27T18:12:07.615849+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 65,
-      "timestamp_utc": "2025-09-27T18:12:07.685569+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 66,
-      "timestamp_utc": "2025-09-27T18:12:07.752795+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            11.5528564453125,
-            10.4765625,
-            1920.0,
-            1051.426513671875
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.75
-          },
-          "features": {
-            "center_x": 880.1514892578125,
-            "center_y": 554.1415405273438,
-            "knee_r": 140.48205267734,
-            "knee_l": 93.88956768910266,
-            "hip_r": 143.8836110995562,
-            "hip_l": 13.170486685748001,
-            "right_hand_up": false,
-            "left_hand_up": true,
-            "right_wrist": [
-              493.96356201171875,
-              719.4970703125
-            ],
-            "left_wrist": [
-              527.5050048828125,
-              515.2948608398438
-            ],
-            "right_shoulder_y": 578.3560791015625,
-            "left_shoulder_y": 515.7508544921875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 67,
-      "timestamp_utc": "2025-09-27T18:12:07.818663+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 68,
-      "timestamp_utc": "2025-09-27T18:12:07.884124+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            23.03594970703125,
-            273.4377136230469,
-            1920.0,
-            1069.5770263671875
-          ],
-          "base_state": "walking_or_moving",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1178.0028076171875,
-            "center_y": 690.3359375,
-            "knee_r": 61.053698397335204,
-            "knee_l": 2.2224190247203532,
-            "hip_r": 26.644252801221494,
-            "hip_l": 21.727819776524882,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              665.464599609375,
-              993.193603515625
-            ],
-            "left_wrist": [
-              697.69287109375,
-              1002.0628051757812
-            ],
-            "right_shoulder_y": 485.22528076171875,
-            "left_shoulder_y": 484.7129821777344
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 69,
-      "timestamp_utc": "2025-09-27T18:12:07.953112+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            1138.7230224609375,
-            111.94390869140625,
-            1920.0,
-            1067.0877685546875
-          ],
-          "base_state": "walking_or_moving",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1775.8966064453125,
-            "center_y": 800.5369873046875,
-            "knee_r": 27.658217126518352,
-            "knee_l": 4.299999409832815,
-            "hip_r": 99.1059668082755,
-            "hip_l": 99.49659146565989,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1408.1099853515625,
-              1032.06298828125
-            ],
-            "left_wrist": [
-              1521.3792724609375,
-              993.5208129882812
-            ],
-            "right_shoulder_y": 775.6859130859375,
-            "left_shoulder_y": 747.8287353515625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 70,
-      "timestamp_utc": "2025-09-27T18:12:08.019514+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 71,
-      "timestamp_utc": "2025-09-27T18:12:08.086292+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            1186.9210205078125,
-            56.272064208984375,
-            1920.0,
-            1071.864501953125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1768.4598388671875,
-            "center_y": 785.5792846679688,
-            "knee_r": 47.18168991209822,
-            "knee_l": 3.416488542825164,
-            "hip_r": 86.8424146597306,
-            "hip_l": 114.32319508057955,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1711.8538818359375,
-              743.1865234375
-            ],
-            "left_wrist": [
-              1820.5635986328125,
-              628.2932739257812
-            ],
-            "right_shoulder_y": 783.6195068359375,
-            "left_shoulder_y": 757.5474853515625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 72,
-      "timestamp_utc": "2025-09-27T18:12:08.150588+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 73,
-      "timestamp_utc": "2025-09-27T18:12:08.218824+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 74,
-      "timestamp_utc": "2025-09-27T18:12:08.284609+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 75,
-      "timestamp_utc": "2025-09-27T18:12:08.348712+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 76,
-      "timestamp_utc": "2025-09-27T18:12:08.418004+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 77,
-      "timestamp_utc": "2025-09-27T18:12:08.484089+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            1166.45703125,
-            45.447509765625,
-            1920.0,
-            1073.6544189453125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1773.9991455078125,
-            "center_y": 676.7877807617188,
-            "knee_r": 36.38563061839239,
-            "knee_l": 11.406355432549141,
-            "hip_r": 100.95898481562747,
-            "hip_l": 134.98615977485827,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1714.152587890625,
-              578.6293334960938
-            ],
-            "left_wrist": [
-              1739.2149658203125,
-              571.6988525390625
-            ],
-            "right_shoulder_y": 606.656982421875,
-            "left_shoulder_y": 595.9918823242188
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 78,
-      "timestamp_utc": "2025-09-27T18:12:08.550784+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 79,
-      "timestamp_utc": "2025-09-27T18:12:08.619873+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 80,
-      "timestamp_utc": "2025-09-27T18:12:08.688729+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 81,
-      "timestamp_utc": "2025-09-27T18:12:08.756592+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 82,
-      "timestamp_utc": "2025-09-27T18:12:08.821144+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 83,
-      "timestamp_utc": "2025-09-27T18:12:08.886396+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 84,
-      "timestamp_utc": "2025-09-27T18:12:08.949034+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 85,
-      "timestamp_utc": "2025-09-27T18:12:09.019902+00:00",
-      "detections": [
-        {
-          "id": 7,
-          "bbox": [
-            411.36181640625,
-            705.0393676757812,
-            572.5799560546875,
-            924.2230224609375
-          ],
-          "base_state": "standing",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.7
-          },
-          "features": {
-            "center_x": 468.887451171875,
-            "center_y": 789.7767333984375,
-            "knee_r": 172.13170484957573,
-            "knee_l": 176.42234771938175,
-            "hip_r": 157.6815839713332,
-            "hip_l": 161.50313217359678,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              535.38818359375,
-              750.290283203125
-            ],
-            "left_wrist": [
-              459.087158203125,
-              741.5533447265625
-            ],
-            "right_shoulder_y": 757.5941162109375,
-            "left_shoulder_y": 763.5368041992188
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 86,
-      "timestamp_utc": "2025-09-27T18:12:09.086597+00:00",
-      "detections": [
-        {
-          "id": 7,
-          "bbox": [
-            410.1327209472656,
-            696.4876098632812,
-            571.2288818359375,
-            918.5535278320312
-          ],
-          "base_state": "standing",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 472.0017395019531,
-            "center_y": 769.4649658203125,
-            "knee_r": 169.54016240127137,
-            "knee_l": 169.20200429443585,
-            "hip_r": 158.90940629701294,
-            "hip_l": 157.4141709637253,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              553.6029052734375,
-              746.7306518554688
-            ],
-            "left_wrist": [
-              471.91693115234375,
-              743.5195922851562
-            ],
-            "right_shoulder_y": 736.13818359375,
-            "left_shoulder_y": 740.3187255859375
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 87,
-      "timestamp_utc": "2025-09-27T18:12:09.149651+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 88,
-      "timestamp_utc": "2025-09-27T18:12:09.217592+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 89,
-      "timestamp_utc": "2025-09-27T18:12:09.284412+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 90,
-      "timestamp_utc": "2025-09-27T18:12:09.350146+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 91,
-      "timestamp_utc": "2025-09-27T18:12:09.417376+00:00",
-      "detections": []
-    },
-    {
-      "frame_id": 92,
-      "timestamp_utc": "2025-09-27T18:12:09.486385+00:00",
-      "detections": [
-        {
-          "id": 8,
-          "bbox": [
-            1375.4599609375,
-            675.8505249023438,
-            1919.6986083984375,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1696.3179931640625,
-            "center_y": 1080.0,
-            "knee_r": 144.01920735289605,
-            "knee_l": 34.48845013068429,
-            "hip_r": 136.99410123356893,
-            "hip_l": 27.246709459220106,
-            "right_hand_up": false,
-            "left_hand_up": true,
-            "right_wrist": [
-              1666.4871826171875,
-              1080.0
-            ],
-            "left_wrist": [
-              1473.343505859375,
-              997.6448364257812
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 9,
-          "bbox": [
-            533.5687866210938,
-            162.16433715820312,
-            1069.87109375,
-            1066.7706298828125
-          ],
-          "base_state": "standing",
-          "events": [],
-          "confidence": {
-            "base_state": 0.7
-          },
-          "features": {
-            "center_x": 819.8091430664062,
-            "center_y": 565.865966796875,
-            "knee_r": 151.62214097363943,
-            "knee_l": 171.45764240941503,
-            "hip_r": 179.0980339544817,
-            "hip_l": 175.81914804431565,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              982.0186157226562,
-              769.4190673828125
-            ],
-            "left_wrist": [
-              684.2443237304688,
-              898.4874267578125
-            ],
-            "right_shoulder_y": 317.7054138183594,
-            "left_shoulder_y": 357.73828125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 93,
-      "timestamp_utc": "2025-09-27T18:12:09.552839+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            1315.3302001953125,
-            582.1934814453125,
-            1920.0,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1617.2454833984375,
-            "center_y": 1080.0,
-            "knee_r": 114.09489657361206,
-            "knee_l": 18.240556253030583,
-            "hip_r": 127.90087902185586,
-            "hip_l": 149.88147860496477,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1719.588134765625,
-              1044.7716064453125
-            ],
-            "left_wrist": [
-              1505.82373046875,
-              943.3179931640625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 94,
-      "timestamp_utc": "2025-09-27T18:12:09.621740+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            1247.3885498046875,
-            500.77679443359375,
-            1920.0,
-            1075.65087890625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1543.07763671875,
-            "center_y": 1038.5587158203125,
-            "knee_r": 88.90596192844794,
-            "knee_l": 23.957328437882335,
-            "hip_r": 152.90815673913735,
-            "hip_l": 132.51959997335018,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1714.6212158203125,
-              1032.024169921875
-            ],
-            "left_wrist": [
-              1414.579833984375,
-              893.3746948242188
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 95,
-      "timestamp_utc": "2025-09-27T18:12:09.683496+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            1178.290283203125,
-            470.53875732421875,
-            1919.6378173828125,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1531.765869140625,
-            "center_y": 1080.0,
-            "knee_r": 88.25050377770104,
-            "knee_l": 14.50501765228677,
-            "hip_r": 132.68608485371345,
-            "hip_l": 25.129607883744157,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1551.0552978515625,
-              1019.1398315429688
-            ],
-            "left_wrist": [
-              1365.412841796875,
-              946.09716796875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 96,
-      "timestamp_utc": "2025-09-27T18:12:09.754204+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            1044.6556396484375,
-            428.1023254394531,
-            1918.4481201171875,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1443.83984375,
-            "center_y": 1080.0,
-            "knee_r": 125.41566393431776,
-            "knee_l": 12.725936966149424,
-            "hip_r": 132.06040408132162,
-            "hip_l": 22.925354497895967,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1469.3453369140625,
-              997.0995483398438
-            ],
-            "left_wrist": [
-              1193.625,
-              946.7845458984375
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 10,
-          "bbox": [
-            169.15484619140625,
-            405.71319580078125,
-            1903.03857421875,
-            1078.987060546875
-          ],
-          "base_state": "standing",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.7
-          },
-          "features": {
-            "center_x": 1142.4013671875,
-            "center_y": 1079.615478515625,
-            "knee_r": 145.1182354085022,
-            "knee_l": 1.202886988523645,
-            "hip_r": 143.93928298512554,
-            "hip_l": 162.4322187109362,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              502.9327697753906,
-              974.6701049804688
-            ],
-            "left_wrist": [
-              391.8475646972656,
-              1054.8062744140625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 97,
-      "timestamp_utc": "2025-09-27T18:12:09.820218+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            163.97735595703125,
-            363.7680358886719,
-            1919.1500244140625,
-            1080.0
-          ],
-          "base_state": "standing",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1180.7327880859375,
-            "center_y": 1074.8779296875,
-            "knee_r": 134.6520200467894,
-            "knee_l": 2.6435298689988356,
-            "hip_r": 142.1779590380262,
-            "hip_l": 165.50252248451838,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              415.55963134765625,
-              966.5606689453125
-            ],
-            "left_wrist": [
-              375.1841125488281,
-              1033.5533447265625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1078.6673583984375
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            1042.343017578125,
-            384.01336669921875,
-            1917.6536865234375,
-            1075.1119384765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1446.228271484375,
-            "center_y": 1080.0,
-            "knee_r": 150.6220692571407,
-            "knee_l": 9.60855238630764,
-            "hip_r": 132.22596136154473,
-            "hip_l": 17.41060700376368,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1560.210205078125,
-              1009.150146484375
-            ],
-            "left_wrist": [
-              1052.9940185546875,
-              929.5404052734375
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 11,
-          "bbox": [
-            158.4144287109375,
-            64.04296875,
-            1909.8896484375,
-            1072.45361328125
-          ],
-          "base_state": "standing",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.7
-          },
-          "features": {
-            "center_x": 1153.5634765625,
-            "center_y": 1043.770263671875,
-            "knee_r": 159.2628640428656,
-            "knee_l": 24.263602226795562,
-            "hip_r": 157.13645425577246,
-            "hip_l": 177.56450699689844,
-            "right_hand_up": true,
-            "left_hand_up": false,
-            "right_wrist": [
-              431.81097412109375,
-              1021.3802490234375
-            ],
-            "left_wrist": [
-              432.3417663574219,
-              1048.6536865234375
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1037.3717041015625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 98,
-      "timestamp_utc": "2025-09-27T18:12:09.886531+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            159.61724853515625,
-            381.54638671875,
-            1920.0,
-            1077.645263671875
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1197.0125732421875,
-            "center_y": 1075.859619140625,
-            "knee_r": 121.88374622034306,
-            "knee_l": 4.167955086840545,
-            "hip_r": 147.02475856448436,
-            "hip_l": 167.83216381152863,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              597.2411499023438,
-              967.369140625
-            ],
-            "left_wrist": [
-              393.0177917480469,
-              1037.8897705078125
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            1024.8948974609375,
-            403.0016174316406,
-            1916.3375244140625,
-            1079.78759765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1436.72216796875,
-            "center_y": 1080.0,
-            "knee_r": 114.90205327685953,
-            "knee_l": 10.267805652058872,
-            "hip_r": 132.76805345468705,
-            "hip_l": 19.850826993936035,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1537.5926513671875,
-              993.6036987304688
-            ],
-            "left_wrist": [
-              1101.159912109375,
-              1027.2945556640625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 99,
-      "timestamp_utc": "2025-09-27T18:12:09.952170+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            156.2193603515625,
-            373.5260925292969,
-            1920.0,
-            1077.7857666015625
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.7
-          },
-          "features": {
-            "center_x": 1199.5980224609375,
-            "center_y": 1074.113525390625,
-            "knee_r": 123.03134557332888,
-            "knee_l": 4.597393395721843,
-            "hip_r": 145.77639085783565,
-            "hip_l": 169.3996154423824,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              633.8988037109375,
-              950.4353637695312
-            ],
-            "left_wrist": [
-              376.57196044921875,
-              1036.544677734375
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            1021.6190185546875,
-            406.07720947265625,
-            1915.8651123046875,
-            1078.0284423828125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1439.808349609375,
-            "center_y": 1080.0,
-            "knee_r": 121.46980560875791,
-            "knee_l": 12.07012112775863,
-            "hip_r": 132.0262651732801,
-            "hip_l": 20.368129527052734,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1542.420166015625,
-              985.9409790039062
-            ],
-            "left_wrist": [
-              1148.4149169921875,
-              990.1182861328125
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 100,
-      "timestamp_utc": "2025-09-27T18:12:10.017457+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            166.424560546875,
-            367.31011962890625,
-            1920.0,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1177.9766845703125,
-            "center_y": 1080.0,
-            "knee_r": 131.83634293520745,
-            "knee_l": 6.366210839469103,
-            "hip_r": 143.4447402907724,
-            "hip_l": 160.79791179370113,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              505.99749755859375,
-              968.056640625
-            ],
-            "left_wrist": [
-              394.1683349609375,
-              1030.98779296875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            1018.2863159179688,
-            393.27703857421875,
-            1916.3572998046875,
-            1074.911865234375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1439.530517578125,
-            "center_y": 1080.0,
-            "knee_r": 149.9540221085354,
-            "knee_l": 10.413772636498127,
-            "hip_r": 130.81823275359224,
-            "hip_l": 19.027289108737676,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1526.1954345703125,
-              1008.3384399414062
-            ],
-            "left_wrist": [
-              1097.927978515625,
-              959.4888305664062
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 101,
-      "timestamp_utc": "2025-09-27T18:12:10.084434+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            157.030517578125,
-            268.3824462890625,
-            1920.0,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1156.2818603515625,
-            "center_y": 1080.0,
-            "knee_r": 138.18537765911577,
-            "knee_l": 4.6279598788815,
-            "hip_r": 143.25166634062867,
-            "hip_l": 161.57509839014958,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              498.3200988769531,
-              924.197998046875
-            ],
-            "left_wrist": [
-              353.0063171386719,
-              1039.8980712890625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            1012.9066772460938,
-            386.262451171875,
-            1917.623779296875,
-            1073.6710205078125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1421.445068359375,
-            "center_y": 1080.0,
-            "knee_r": 175.04703687655896,
-            "knee_l": 11.683544778291175,
-            "hip_r": 126.20539258917003,
-            "hip_l": 22.98009112140695,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1499.81396484375,
-              1061.5985107421875
-            ],
-            "left_wrist": [
-              1168.33154296875,
-              911.4056396484375
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 102,
-      "timestamp_utc": "2025-09-27T18:12:10.152966+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            163.8087158203125,
-            342.30743408203125,
-            1920.0,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand",
-            "exiting_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "exiting_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1163.095703125,
-            "center_y": 1080.0,
-            "knee_r": 138.4224362214791,
-            "knee_l": 6.103691398630316,
-            "hip_r": 143.75153399634084,
-            "hip_l": 160.23258426000064,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              445.7008056640625,
-              962.9970703125
-            ],
-            "left_wrist": [
-              360.3642883300781,
-              1029.879638671875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            1013.6927490234375,
-            384.78826904296875,
-            1917.517822265625,
-            1072.9012451171875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1409.52734375,
-            "center_y": 1080.0,
-            "knee_r": 158.78768321067645,
-            "knee_l": 12.869587318570849,
-            "hip_r": 128.15401935760187,
-            "hip_l": 21.09726855250231,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1533.2947998046875,
-              1029.3572998046875
-            ],
-            "left_wrist": [
-              1019.6490478515625,
-              944.918701171875
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 103,
-      "timestamp_utc": "2025-09-27T18:12:10.219553+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            157.01055908203125,
-            347.06689453125,
-            1920.0,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1153.4207763671875,
-            "center_y": 1080.0,
-            "knee_r": 117.64673541086843,
-            "knee_l": 5.364253757578687,
-            "hip_r": 137.38707866398562,
-            "hip_l": 161.79302363927226,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              380.8581237792969,
-              968.87841796875
-            ],
-            "left_wrist": [
-              363.23797607421875,
-              1018.1574096679688
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            1063.4439697265625,
-            377.40875244140625,
-            1920.0,
-            1075.220947265625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1507.8814697265625,
-            "center_y": 1080.0,
-            "knee_r": 140.34858205768157,
-            "knee_l": 11.225655900636308,
-            "hip_r": 129.87191540690137,
-            "hip_l": 20.559229094383408,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1502.5810546875,
-              1024.837646484375
-            ],
-            "left_wrist": [
-              1230.3760986328125,
-              939.9065551757812
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1080.0
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 104,
-      "timestamp_utc": "2025-09-27T18:12:10.291781+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            144.81298828125,
-            368.55670166015625,
-            1920.0,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1151.1336669921875,
-            "center_y": 1079.787353515625,
-            "knee_r": 132.39502907670249,
-            "knee_l": 6.55409320125769,
-            "hip_r": 144.86813851973986,
-            "hip_l": 159.62763452586537,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              512.5419921875,
-              973.1503295898438
-            ],
-            "left_wrist": [
-              340.9009094238281,
-              1027.2568359375
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1079.1492919921875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 105,
-      "timestamp_utc": "2025-09-27T18:12:10.352511+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            45.1087646484375,
-            363.283447265625,
-            1914.31494140625,
-            1076.7041015625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1043.8555908203125,
-            "center_y": 1073.2142333984375,
-            "knee_r": 148.92957049876523,
-            "knee_l": 7.305415167633016,
-            "hip_r": 135.6172671423091,
-            "hip_l": 150.29537456921094,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              311.8989562988281,
-              975.6239013671875
-            ],
-            "left_wrist": [
-              278.6082458496094,
-              1031.4224853515625
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1052.85693359375
-          }
-        },
-        {
-          "id": 12,
-          "bbox": [
-            0.7586517333984375,
-            7.486083984375,
-            734.069091796875,
-            1066.7359619140625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 301.8356628417969,
-            "center_y": 463.264404296875,
-            "knee_r": 7.312039282807644,
-            "knee_l": 45.72965337140003,
-            "hip_r": 1.654308444410223,
-            "hip_l": 18.07088533733161,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              395.880615234375,
-              1030.7222900390625
-            ],
-            "left_wrist": [
-              251.94630432128906,
-              982.074462890625
-            ],
-            "right_shoulder_y": 69.06047058105469,
-            "left_shoulder_y": 53.62934875488281
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 106,
-      "timestamp_utc": "2025-09-27T18:12:10.418072+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            314.2430419921875,
-            1873.31982421875,
-            1080.0
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 912.7976684570312,
-            "center_y": 1071.4407958984375,
-            "knee_r": 135.66109170979203,
-            "knee_l": 8.796270579218934,
-            "hip_r": 142.16436174418465,
-            "hip_l": 154.83473759414355,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              259.5854187011719,
-              950.9827880859375
-            ],
-            "left_wrist": [
-              201.954345703125,
-              1001.1762084960938
-            ],
-            "right_shoulder_y": 1080.0,
-            "left_shoulder_y": 1057.8382568359375
-          }
-        },
-        {
-          "id": 12,
-          "bbox": [
-            0.18896484375,
-            8.153045654296875,
-            637.3978881835938,
-            1062.0826416015625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 322.68426513671875,
-            "center_y": 452.8894958496094,
-            "knee_r": 160.47517783236015,
-            "knee_l": 142.3679920470458,
-            "hip_r": 169.8540183599102,
-            "hip_l": 170.41261029826995,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              334.2640075683594,
-              1010.91064453125
-            ],
-            "left_wrist": [
-              227.64181518554688,
-              1032.3743896484375
-            ],
-            "right_shoulder_y": 53.7843017578125,
-            "left_shoulder_y": 92.45137023925781
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 107,
-      "timestamp_utc": "2025-09-27T18:12:10.485451+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            36.57476806640625,
-            183.2640380859375,
-            1811.2186279296875,
-            1066.5557861328125
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand",
-            "entering_room"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "entering_room": 1.0,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 884.8231201171875,
-            "center_y": 1034.2740478515625,
-            "knee_r": 122.84502950326777,
-            "knee_l": 30.38278334299149,
-            "hip_r": 141.11816544243104,
-            "hip_l": 127.75867722802764,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              994.73583984375,
-              906.1238403320312
-            ],
-            "left_wrist": [
-              221.55258178710938,
-              950.1524047851562
-            ],
-            "right_shoulder_y": 1070.5194091796875,
-            "left_shoulder_y": 960.4039306640625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 108,
-      "timestamp_utc": "2025-09-27T18:12:10.553997+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            6.760986328125,
-            1734.7650146484375,
-            1066.9346923828125
-          ],
-          "base_state": "walking_or_moving",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 805.4566650390625,
-            "center_y": 955.06005859375,
-            "knee_r": 89.37009187431251,
-            "knee_l": 42.678738656292964,
-            "hip_r": 139.63113107076464,
-            "hip_l": 104.41905270863244,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              1095.2218017578125,
-              922.1715087890625
-            ],
-            "left_wrist": [
-              145.59896850585938,
-              764.3206787109375
-            ],
-            "right_shoulder_y": 967.0081787109375,
-            "left_shoulder_y": 795.6392822265625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 109,
-      "timestamp_utc": "2025-09-27T18:12:10.624051+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            834.7849731445312,
-            5.1361083984375,
-            1915.974609375,
-            1054.7698974609375
-          ],
-          "base_state": "walking_or_moving",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1450.841796875,
-            "center_y": 818.9996337890625,
-            "knee_r": 176.71879445092924,
-            "knee_l": 32.2866236837239,
-            "hip_r": 39.10509796985298,
-            "hip_l": 0.82433869219469,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1272.02392578125,
-              937.223388671875
-            ],
-            "left_wrist": [
-              996.0791625976562,
-              826.1140747070312
-            ],
-            "right_shoulder_y": 654.2340698242188,
-            "left_shoulder_y": 699.9049072265625
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            9.264678955078125,
-            1657.499267578125,
-            1070.753173828125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 834.1859741210938,
-            "center_y": 853.5078125,
-            "knee_r": 163.98463148564417,
-            "knee_l": 19.274846020619336,
-            "hip_r": 124.02249530938147,
-            "hip_l": 109.56490532241504,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              286.61126708984375,
-              821.742919921875
-            ],
-            "left_wrist": [
-              112.52462768554688,
-              607.2145385742188
-            ],
-            "right_shoulder_y": 841.8732299804688,
-            "left_shoulder_y": 633.439453125
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 110,
-      "timestamp_utc": "2025-09-27T18:12:10.688549+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            21.9422607421875,
-            1662.6763916015625,
-            1070.8016357421875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 677.7767333984375,
-            "center_y": 760.9275512695312,
-            "knee_r": 161.44986634360652,
-            "knee_l": 31.50480060079652,
-            "hip_r": 136.4413874398746,
-            "hip_l": 123.67530410979987,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              758.782470703125,
-              869.2496337890625
-            ],
-            "left_wrist": [
-              128.2562255859375,
-              582.8766479492188
-            ],
-            "right_shoulder_y": 796.1543579101562,
-            "left_shoulder_y": 497.0574035644531
-          }
-        },
-        {
-          "id": 10,
-          "bbox": [
-            839.326171875,
-            6.399078369140625,
-            1919.1065673828125,
-            1048.033203125
-          ],
-          "base_state": "walking_or_moving",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1451.646484375,
-            "center_y": 812.4869384765625,
-            "knee_r": 174.42636102910922,
-            "knee_l": 36.142794292576845,
-            "hip_r": 46.32772007292399,
-            "hip_l": 6.286828639715855,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1338.54931640625,
-              891.437255859375
-            ],
-            "left_wrist": [
-              924.973388671875,
-              753.1292724609375
-            ],
-            "right_shoulder_y": 600.8838500976562,
-            "left_shoulder_y": 632.212890625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 111,
-      "timestamp_utc": "2025-09-27T18:12:10.751546+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            5.405914306640625,
-            1677.9876708984375,
-            1073.2275390625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 786.1439208984375,
-            "center_y": 776.3287963867188,
-            "knee_r": 170.61982193323917,
-            "knee_l": 14.396829019493776,
-            "hip_r": 120.38950802552169,
-            "hip_l": 105.84641767724209,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              434.411865234375,
-              773.2042846679688
-            ],
-            "left_wrist": [
-              233.66615295410156,
-              516.983154296875
-            ],
-            "right_shoulder_y": 757.0664672851562,
-            "left_shoulder_y": 488.8956298828125
-          }
-        },
-        {
-          "id": 10,
-          "bbox": [
-            794.9708862304688,
-            4.830963134765625,
-            1759.44140625,
-            1044.6636962890625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1074.1082763671875,
-            "center_y": 881.494384765625,
-            "knee_r": 74.65351007017556,
-            "knee_l": 53.26802421701453,
-            "hip_r": 109.03478741614413,
-            "hip_l": 40.50995166600934,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1270.25634765625,
-              870.728759765625
-            ],
-            "left_wrist": [
-              698.5635986328125,
-              711.9336547851562
-            ],
-            "right_shoulder_y": 740.737060546875,
-            "left_shoulder_y": 652.144775390625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 112,
-      "timestamp_utc": "2025-09-27T18:12:10.818358+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            19.314056396484375,
-            1718.7293701171875,
-            1072.72509765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 846.2247314453125,
-            "center_y": 807.447509765625,
-            "knee_r": 133.34391560379942,
-            "knee_l": 42.489282486944894,
-            "hip_r": 134.3636588214768,
-            "hip_l": 104.01051484421097,
-            "right_hand_up": false,
-            "left_hand_up": true,
-            "right_wrist": [
-              1298.263916015625,
-              900.728271484375
-            ],
-            "left_wrist": [
-              151.2637939453125,
-              495.43426513671875
-            ],
-            "right_shoulder_y": 791.7158813476562,
-            "left_shoulder_y": 524.9117431640625
-          }
-        },
-        {
-          "id": 10,
-          "bbox": [
-            918.7020263671875,
-            2.951934814453125,
-            1915.5703125,
-            989.398681640625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1427.748046875,
-            "center_y": 831.01318359375,
-            "knee_r": 118.04251043420412,
-            "knee_l": 27.631592862181826,
-            "hip_r": 61.05591828968606,
-            "hip_l": 28.026114912788202,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1286.8265380859375,
-              804.1961059570312
-            ],
-            "left_wrist": [
-              1019.8027954101562,
-              744.4185791015625
-            ],
-            "right_shoulder_y": 626.9718017578125,
-            "left_shoulder_y": 630.408447265625
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 113,
-      "timestamp_utc": "2025-09-27T18:12:10.887070+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            3.57366943359375,
-            12.854736328125,
-            1765.8204345703125,
-            1068.77685546875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 803.9589233398438,
-            "center_y": 777.834228515625,
-            "knee_r": 164.63314310907487,
-            "knee_l": 11.533246816019558,
-            "hip_r": 128.59073800251232,
-            "hip_l": 121.89756266245553,
-            "right_hand_up": true,
-            "left_hand_up": false,
-            "right_wrist": [
-              355.5390930175781,
-              720.5540771484375
-            ],
-            "left_wrist": [
-              241.93350219726562,
-              502.04986572265625
-            ],
-            "right_shoulder_y": 766.6900634765625,
-            "left_shoulder_y": 486.81805419921875
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 114,
-      "timestamp_utc": "2025-09-27T18:12:10.951730+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            13.062652587890625,
-            1766.57373046875,
-            1075.7186279296875
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 772.6465454101562,
-            "center_y": 752.53173828125,
-            "knee_r": 153.83097111565937,
-            "knee_l": 15.3341835001,
-            "hip_r": 141.67790415215774,
-            "hip_l": 132.04266704441937,
-            "right_hand_up": true,
-            "left_hand_up": false,
-            "right_wrist": [
-              278.6356506347656,
-              679.4144897460938
-            ],
-            "left_wrist": [
-              133.71116638183594,
-              509.3536376953125
-            ],
-            "right_shoulder_y": 788.7958374023438,
-            "left_shoulder_y": 487.212158203125
-          }
-        },
-        {
-          "id": 10,
-          "bbox": [
-            947.3111572265625,
-            6.806121826171875,
-            1914.2454833984375,
-            1040.1348876953125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1405.829345703125,
-            "center_y": 848.4046630859375,
-            "knee_r": 143.01868592954463,
-            "knee_l": 27.483650334962444,
-            "hip_r": 70.33333539956155,
-            "hip_l": 31.09496644778542,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1210.3853759765625,
-              892.0889282226562
-            ],
-            "left_wrist": [
-              972.8591918945312,
-              760.654541015625
-            ],
-            "right_shoulder_y": 652.40478515625,
-            "left_shoulder_y": 635.5112915039062
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 115,
-      "timestamp_utc": "2025-09-27T18:12:11.015185+00:00",
-      "detections": [
-        {
-          "id": 1,
-          "bbox": [
-            0.0,
-            6.07379150390625,
-            1771.0242919921875,
-            1066.6510009765625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 897.4912719726562,
-            "center_y": 817.654052734375,
-            "knee_r": 132.9988617027513,
-            "knee_l": 16.450202872904747,
-            "hip_r": 134.24573395880975,
-            "hip_l": 131.19819148744642,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              110.67819213867188,
-              592.6483764648438
-            ],
-            "left_wrist": [
-              114.41441345214844,
-              472.1203308105469
-            ],
-            "right_shoulder_y": 798.9428100585938,
-            "left_shoulder_y": 560.30322265625
-          }
-        },
-        {
-          "id": 10,
-          "bbox": [
-            943.4190673828125,
-            6.798065185546875,
-            1915.5546875,
-            1041.7530517578125
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1420.477294921875,
-            "center_y": 845.1348876953125,
-            "knee_r": 109.40928663043245,
-            "knee_l": 19.971067478676108,
-            "hip_r": 69.45220328417683,
-            "hip_l": 40.11134839654372,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1188.46630859375,
-              860.1764526367188
-            ],
-            "left_wrist": [
-              1011.186767578125,
-              749.5515747070312
-            ],
-            "right_shoulder_y": 662.7246704101562,
-            "left_shoulder_y": 634.2752075195312
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 116,
-      "timestamp_utc": "2025-09-27T18:12:11.085972+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            962.5900268554688,
-            3.662109375,
-            1917.53662109375,
-            1015.6730346679688
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1537.4365234375,
-            "center_y": 762.8114013671875,
-            "knee_r": 141.32684961110579,
-            "knee_l": 23.89572388272452,
-            "hip_r": 57.9586027991885,
-            "hip_l": 27.97604208010566,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1282.396484375,
-              826.6336669921875
-            ],
-            "left_wrist": [
-              1080.8062744140625,
-              667.8670654296875
-            ],
-            "right_shoulder_y": 562.9625244140625,
-            "left_shoulder_y": 542.090576171875
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            2.9912109375,
-            0.9287109375,
-            1769.337890625,
-            1073.10791015625
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 811.036865234375,
-            "center_y": 739.2992553710938,
-            "knee_r": 145.40153774072186,
-            "knee_l": 25.270360064063333,
-            "hip_r": 140.7216311744277,
-            "hip_l": 136.86816048736645,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              223.746826171875,
-              661.9119873046875
-            ],
-            "left_wrist": [
-              61.48077392578125,
-              462.8313293457031
-            ],
-            "right_shoulder_y": 752.1139526367188,
-            "left_shoulder_y": 484.3517761230469
-          }
-        }
-      ]
-    },
-    {
-      "frame_id": 117,
-      "timestamp_utc": "2025-09-27T18:12:11.153471+00:00",
-      "detections": [
-        {
-          "id": 10,
-          "bbox": [
-            968.3933715820312,
-            1.305267333984375,
-            1917.8922119140625,
-            1023.1361083984375
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [],
-          "confidence": {
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 1555.9267578125,
-            "center_y": 777.8071899414062,
-            "knee_r": 141.71257957805108,
-            "knee_l": 22.75883270486956,
-            "hip_r": 58.163529595444814,
-            "hip_l": 28.349511181273883,
-            "right_hand_up": false,
-            "left_hand_up": false,
-            "right_wrist": [
-              1313.244873046875,
-              872.7333984375
-            ],
-            "left_wrist": [
-              1095.5604248046875,
-              738.1047973632812
-            ],
-            "right_shoulder_y": 573.3709716796875,
-            "left_shoulder_y": 566.7841186523438
-          }
-        },
-        {
-          "id": 1,
-          "bbox": [
-            6.62640380859375,
-            0.0,
-            1792.950927734375,
-            1080.0
-          ],
-          "base_state": "sitting_or_squatting",
-          "events": [
-            "raising_hand"
-          ],
-          "confidence": {
-            "raising_hand": 0.9,
-            "base_state": 0.85
-          },
-          "features": {
-            "center_x": 812.2798461914062,
-            "center_y": 729.11083984375,
-            "knee_r": 168.25216255066485,
-            "knee_l": 2.8739111881344948,
-            "hip_r": 135.63871284825166,
-            "hip_l": 130.93568437276872,
-            "right_hand_up": true,
-            "left_hand_up": true,
-            "right_wrist": [
-              244.1451873779297,
-              660.3502807617188
-            ],
-            "left_wrist": [
-              69.80030822753906,
-              478.53656005859375
-            ],
-            "right_shoulder_y": 763.0361938476562,
-            "left_shoulder_y": 490.4621887207031
           }
         }
       ]

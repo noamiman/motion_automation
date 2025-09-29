@@ -1,5 +1,5 @@
 # automation_recommender.py
-# few-shot using
+# using few-shot
 import os
 import json
 import re

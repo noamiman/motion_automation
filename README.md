@@ -1,1 +1,186 @@
 # motion_automation
+
+Smart-home **automation recommendation** pipeline that observes motion from a camera/video feed, summarizes activity, predicts **user intentions**, and emits **actionable YAML automations** ready for a Home-Assistant–style setup.
+
+> End-to-end: **YOLOv8-Pose** (OpenCV) → event compression → **LLM intent prediction** (few-shot & zero-shot) → **cosine-similarity** filtering → **YAML** generation.
+
+---
+
+## Table of Contents
+
+- [Highlights](#highlights)
+- [Pipeline](#pipeline)
+- [Repository Structure](#repository-structure)
+- [Tech & Techniques](#tech--techniques)
+- [Pipeline Diagram](#pipeline-diagram)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Quick Start](#quick-start)
+- [Configuration](#configuration)
+- [Example Output (YAML)](#example-output-yaml)
+- [Development Notes](#development-notes)
+- [Future Work](#future-work)
+- [License](#license)
+
+---
+
+## Highlights
+
+- **Computer Vision:** YOLOv8-Pose model (`yolov8n-pose.pt`) with **OpenCV** (`cv2`) for real-time skeletal/motion analysis.
+- **LLMs (Local):** **Ollama** runtime (default `llama3.2:3b`) for **few-shot** intent prediction and **zero-shot** YAML synthesis.
+- **Representation Learning:** **Cosine similarity** (configurable `SIM_THRESH`) to select representative events and reduce noise.
+- **Controllability:** Probability cutoff (`ACTIONS_MIN_PROB`) and detection limits (`LIMIT_DETECTIONS`) to tune precision/recall.
+- **Traceable Artifacts:** Intermediate **JSON/TXT** outputs at each stage plus final **YAML** automations.
+
+---
+
+## Pipeline
+
+All five stages are orchestrated by [`main.py`](./main.py):
+
+1. **Capture & Detect**  
+   `MotionAnalyzer` runs YOLOv8-Pose on a camera or video source and writes **motion events JSON** (e.g., `detection/data/motion_analysis_room1.json`).
+
+2. **Compress**  
+   Convert verbose events JSON into compact **event lines** (`detection/data/events.txt`) for LLM consumption.
+
+3. **Intent Prediction (Few-shot)**  
+   An LLM infers **user intentions** from event lines, producing `output/outputs/representatives_result.json`.  
+   Representative events are chosen using **cosine similarity** (`SIM_THRESH`) and an optional **limit**.
+
+4. **Action Recommendations**  
+   Generate **automation ideas** with probabilities → `output/outputs/automation_rec.json`  
+   Filtered by `ACTIONS_MIN_PROB`.
+
+5. **Zero-shot YAML Generation**  
+   Normalize and emit **automation YAML** → `output/outputs/yaml_file_result.yaml`.
+
+---
+# Repository Structure
+
+Motion_Analysis/
+├─ detection/
+│  ├─ data/
+│  ├─ video_output.py
+│  └─ yolov8n-pose.pt
+├─ output/
+│  ├─ outputs/
+│  │  ├─ automation_rec.json
+│  │  ├─ representatives_result.json
+│  │  └─ yaml_file_result.yaml
+│  ├─ automation_prompt_generator.py
+│  ├─ generate_yaml.py
+│  └─ intension_predictior.py
+└─ prompts/
+   ├─ intension_prompt.txt
+   └─ prompt_for_auto.txt
+└─  main.py
+
+---
+
+## Tech & Techniques
+
+**Computer Vision**
+- **YOLOv8-Pose** (`yolov8n-pose.pt`) for human keypoints & activity cues.
+- **OpenCV (cv2)** for frame capture, preprocessing, and I/O.
+
+**NLP / LLM**
+- **Ollama** local model: `llama3.2:3b` (configurable).
+- **Few-shot prompting** (`prompts/intension_prompt.txt`) to steer intent extraction.
+- **Zero-shot prompting** (`prompts/prompt_for_zeroShot.txt`) to synthesize standardized **YAML**.
+
+**Scoring & Filtering**
+- **Cosine similarity** (`SIM_THRESH`) for representative event selection.
+- **Probability thresholds** (`ACTIONS_MIN_PROB`) to keep strong automation candidates.
+
+**Outputs**
+- **JSON/TXT** artifacts for observability.
+- **Home-Assistant-style YAML** automations.
+
+---
+
+## Pipeline Diagram
+
+<!-- PIPELINE DIAGRAM PLACEHOLDER -->
+<p align="center">
+  <br><br><br>
+  <img src="docs/pipeline.png" alt="Pipeline Diagram" width="900">
+  <br><br><br>
+</p>
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python **3.10+**
+- [Ollama](https://ollama.com) with the model you want (default: `llama3.2:3b`)
+    ```bash
+    ollama pull llama3.2:3b
+- (Optional) GPU for faster YOLOv8-Pose inference
+
+    
+    git clone https://github.com/noamiman/motion_automation.git
+    cd motion_automation
+    
+    python -m venv .venv
+    # macOS/Linux
+    source .venv/bin/activate
+    # Windows
+    # .venv\Scripts\activate
+    
+    pip install -r requirements.txt
+
+### Quick Start
+
+Edit the top of main.py
+ if needed:
+
+    MODEL_PATH = "yolov8n-pose.pt"
+    VIDEO_SOURCE = 0  # 0 = default camera, or path to a video file
+    
+    MODEL_NAME = "llama3.2:3b"
+    LIMIT_DETECTIONS = 100
+    SIM_THRESH = 0.86
+    ACTIONS_MIN_PROB = 0.10
+
+Run:
+
+    python main.py
+
+### Artifacts:
+
+- Motion JSON: detection/data/motion_analysis_room1.json
+
+- Events TXT: detection/data/events.txt
+
+- Intent JSON: output/outputs/representatives_result.json
+
+- Actions JSON: output/outputs/automation_rec.json
+
+- Final YAML: output/outputs/yaml_file_result.yaml
+
+### Future Work
+
+- VLM-powered perception: Replace/augment YOLOv8-Pose with vision-language models (VLMs) for richer scene understanding, human-object interaction (HOI), and temporal reasoning.
+
+- Temporal action recognition: Integrate transformers (e.g., TimeSformer/VideoMAE-style) to better capture multi-step activities.
+
+- Graph reasoning: Use scene graphs or GNNs over keypoints/objects to infer relationships (who, what, where).
+
+- Active learning loop: Allow users to accept/reject automations and fine-tune prompts or weights automatically.
+
+- RAG for devices/entities: Ground YAML generation with a retrieval layer over local device/entity catalogs and Home Assistant docs.
+
+- Privacy-first on-device: Quantized models and accelerated backends for fully local inference.
+
+- Evaluation harness: Precision/recall metrics for intent detection; YAML validation and dry-run executor.
+
+- Multi-camera fusion: Room zoning and cross-camera identity tracking to reduce false positives.
+
+- Deployment: Docker compose with GPU support; optional web UI for reviewing events and proposed automations.
+
+# License
+https://huggingface.co/meta-llama/Llama-3.2-3B/blob/main/LICENSE.txt

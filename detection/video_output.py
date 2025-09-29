@@ -3,7 +3,7 @@ import json
 import math
 from collections import defaultdict, deque
 from datetime import datetime, timezone
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Tuple
 import numpy as np
 from ultralytics import YOLO
 

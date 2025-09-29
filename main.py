@@ -1,7 +1,7 @@
 # main.py
 import os
 import sys
-from typing import List, Optional, Any
+from typing import List, Optional
 
 from detection.video_output import MotionAnalyzer
 from detection.data.data_compressor import save_compressed_events
@@ -91,8 +91,6 @@ def generate_automation_yaml_zeroshot(
         temperature=temperature,
         max_new_tokens=max_new_tokens,
     )
-
-
 
 
 def main() -> None:
