@@ -102,12 +102,7 @@ Motion_Analysis/
 
 ## Pipeline Diagram
 
-<!-- PIPELINE DIAGRAM PLACEHOLDER -->
-<p align="center">
-  <br><br><br>
-  <img src="docs/pipeline.png" alt="Pipeline Diagram" width="900">
-  <br><br><br>
-</p>
+<img width="411" height="401" alt="צילום מסך 2025-09-29 ב-17 52 48" src="https://github.com/user-attachments/assets/64d9e12f-365a-43d3-9223-a7e0659a58c3" />
 
 ---
 
